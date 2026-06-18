@@ -85,9 +85,9 @@ void __global__ add(double *dst, const double *x, const double *y) {
 
     // 取消该if语句，使用computer-sanitizer 检测cubin目标文件，就可以详细看到出错的地方。
     // 如：Address 0x7e2ccae02008 is out of bounds，表示越界访问显存了！！！
-    // if (tid < N) { 
+    if (tid < N) { 
         // dst[tid] = x[tid] + y[tid];
         dst[tid] = add_device(x[tid], y[tid]);
         // printf("thread id %d: %lf   thread-id:%d, block-id:%d\n", tid, dst[tid], threadIdx.x, blockIdx.x);
-    // }
+    }
 }
