@@ -1,0 +1,1725 @@
+========= COMPUTE-SANITIZER
+========= Invalid __global__ read of size 8 bytes
+=========     at add(double *, const double *, const double *)+0x78 in /home/chris/workspace/cuda_cpp_study/add1.cu:90
+=========     by thread (1,0,0) in block (8,0,0)
+=========     Address 0x7fe064e02008 is out of bounds
+=========     and is 1 bytes after the nearest allocation at 0x7fe064e00000 of size 8,200 bytes
+=========     Saved host backtrace up to driver entry point at kernel launch time
+=========     Host Frame:cuLaunchKernel [0x39fb94]
+=========                in /lib/x86_64-linux-gnu/libcuda.so.1
+=========     Host Frame:libcudart_static_4d8b33a106dceb3c07a56e26de61f2d53bb62a68 [0x110cd]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaLaunchKernel [0x7480d]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaError cudaLaunchKernel<char>(char const*, dim3, dim3, void**, unsigned long, CUstream_st*) [0xb7f5]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__device_stub__Z3addPdPKdS1_(double*, double const*, double const*) [0xb697]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:add(double*, double const*, double const*) [0xb6e0]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:main [0xb09a]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__libc_start_call_main in ../sysdeps/nptl/libc_start_call_main.h:58 [0x29d8f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:__libc_start_main in ../csu/libc-start.c:392 [0x29e3f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:_start [0xab24]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+========= 
+========= Invalid __global__ read of size 8 bytes
+=========     at add(double *, const double *, const double *)+0x78 in /home/chris/workspace/cuda_cpp_study/add1.cu:90
+=========     by thread (2,0,0) in block (8,0,0)
+=========     Address 0x7fe064e02010 is out of bounds
+=========     and is 9 bytes after the nearest allocation at 0x7fe064e00000 of size 8,200 bytes
+=========     Saved host backtrace up to driver entry point at kernel launch time
+=========     Host Frame:cuLaunchKernel [0x39fb94]
+=========                in /lib/x86_64-linux-gnu/libcuda.so.1
+=========     Host Frame:libcudart_static_4d8b33a106dceb3c07a56e26de61f2d53bb62a68 [0x110cd]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaLaunchKernel [0x7480d]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaError cudaLaunchKernel<char>(char const*, dim3, dim3, void**, unsigned long, CUstream_st*) [0xb7f5]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__device_stub__Z3addPdPKdS1_(double*, double const*, double const*) [0xb697]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:add(double*, double const*, double const*) [0xb6e0]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:main [0xb09a]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__libc_start_call_main in ../sysdeps/nptl/libc_start_call_main.h:58 [0x29d8f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:__libc_start_main in ../csu/libc-start.c:392 [0x29e3f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:_start [0xab24]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+========= 
+========= Invalid __global__ read of size 8 bytes
+=========     at add(double *, const double *, const double *)+0x78 in /home/chris/workspace/cuda_cpp_study/add1.cu:90
+=========     by thread (3,0,0) in block (8,0,0)
+=========     Address 0x7fe064e02018 is out of bounds
+=========     and is 17 bytes after the nearest allocation at 0x7fe064e00000 of size 8,200 bytes
+=========     Saved host backtrace up to driver entry point at kernel launch time
+=========     Host Frame:cuLaunchKernel [0x39fb94]
+=========                in /lib/x86_64-linux-gnu/libcuda.so.1
+=========     Host Frame:libcudart_static_4d8b33a106dceb3c07a56e26de61f2d53bb62a68 [0x110cd]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaLaunchKernel [0x7480d]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaError cudaLaunchKernel<char>(char const*, dim3, dim3, void**, unsigned long, CUstream_st*) [0xb7f5]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__device_stub__Z3addPdPKdS1_(double*, double const*, double const*) [0xb697]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:add(double*, double const*, double const*) [0xb6e0]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:main [0xb09a]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__libc_start_call_main in ../sysdeps/nptl/libc_start_call_main.h:58 [0x29d8f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:__libc_start_main in ../csu/libc-start.c:392 [0x29e3f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:_start [0xab24]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+========= 
+========= Invalid __global__ read of size 8 bytes
+=========     at add(double *, const double *, const double *)+0x78 in /home/chris/workspace/cuda_cpp_study/add1.cu:90
+=========     by thread (4,0,0) in block (8,0,0)
+=========     Address 0x7fe064e02020 is out of bounds
+=========     and is 25 bytes after the nearest allocation at 0x7fe064e00000 of size 8,200 bytes
+=========     Saved host backtrace up to driver entry point at kernel launch time
+=========     Host Frame:cuLaunchKernel [0x39fb94]
+=========                in /lib/x86_64-linux-gnu/libcuda.so.1
+=========     Host Frame:libcudart_static_4d8b33a106dceb3c07a56e26de61f2d53bb62a68 [0x110cd]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaLaunchKernel [0x7480d]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaError cudaLaunchKernel<char>(char const*, dim3, dim3, void**, unsigned long, CUstream_st*) [0xb7f5]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__device_stub__Z3addPdPKdS1_(double*, double const*, double const*) [0xb697]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:add(double*, double const*, double const*) [0xb6e0]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:main [0xb09a]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__libc_start_call_main in ../sysdeps/nptl/libc_start_call_main.h:58 [0x29d8f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:__libc_start_main in ../csu/libc-start.c:392 [0x29e3f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:_start [0xab24]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+========= 
+========= Invalid __global__ read of size 8 bytes
+=========     at add(double *, const double *, const double *)+0x78 in /home/chris/workspace/cuda_cpp_study/add1.cu:90
+=========     by thread (5,0,0) in block (8,0,0)
+=========     Address 0x7fe064e02028 is out of bounds
+=========     and is 33 bytes after the nearest allocation at 0x7fe064e00000 of size 8,200 bytes
+=========     Saved host backtrace up to driver entry point at kernel launch time
+=========     Host Frame:cuLaunchKernel [0x39fb94]
+=========                in /lib/x86_64-linux-gnu/libcuda.so.1
+=========     Host Frame:libcudart_static_4d8b33a106dceb3c07a56e26de61f2d53bb62a68 [0x110cd]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaLaunchKernel [0x7480d]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaError cudaLaunchKernel<char>(char const*, dim3, dim3, void**, unsigned long, CUstream_st*) [0xb7f5]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__device_stub__Z3addPdPKdS1_(double*, double const*, double const*) [0xb697]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:add(double*, double const*, double const*) [0xb6e0]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:main [0xb09a]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__libc_start_call_main in ../sysdeps/nptl/libc_start_call_main.h:58 [0x29d8f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:__libc_start_main in ../csu/libc-start.c:392 [0x29e3f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:_start [0xab24]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+========= 
+========= Invalid __global__ read of size 8 bytes
+=========     at add(double *, const double *, const double *)+0x78 in /home/chris/workspace/cuda_cpp_study/add1.cu:90
+=========     by thread (6,0,0) in block (8,0,0)
+=========     Address 0x7fe064e02030 is out of bounds
+=========     and is 41 bytes after the nearest allocation at 0x7fe064e00000 of size 8,200 bytes
+=========     Saved host backtrace up to driver entry point at kernel launch time
+=========     Host Frame:cuLaunchKernel [0x39fb94]
+=========                in /lib/x86_64-linux-gnu/libcuda.so.1
+=========     Host Frame:libcudart_static_4d8b33a106dceb3c07a56e26de61f2d53bb62a68 [0x110cd]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaLaunchKernel [0x7480d]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaError cudaLaunchKernel<char>(char const*, dim3, dim3, void**, unsigned long, CUstream_st*) [0xb7f5]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__device_stub__Z3addPdPKdS1_(double*, double const*, double const*) [0xb697]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:add(double*, double const*, double const*) [0xb6e0]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:main [0xb09a]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__libc_start_call_main in ../sysdeps/nptl/libc_start_call_main.h:58 [0x29d8f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:__libc_start_main in ../csu/libc-start.c:392 [0x29e3f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:_start [0xab24]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+========= 
+========= Invalid __global__ read of size 8 bytes
+=========     at add(double *, const double *, const double *)+0x78 in /home/chris/workspace/cuda_cpp_study/add1.cu:90
+=========     by thread (7,0,0) in block (8,0,0)
+=========     Address 0x7fe064e02038 is out of bounds
+=========     and is 49 bytes after the nearest allocation at 0x7fe064e00000 of size 8,200 bytes
+=========     Saved host backtrace up to driver entry point at kernel launch time
+=========     Host Frame:cuLaunchKernel [0x39fb94]
+=========                in /lib/x86_64-linux-gnu/libcuda.so.1
+=========     Host Frame:libcudart_static_4d8b33a106dceb3c07a56e26de61f2d53bb62a68 [0x110cd]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaLaunchKernel [0x7480d]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaError cudaLaunchKernel<char>(char const*, dim3, dim3, void**, unsigned long, CUstream_st*) [0xb7f5]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__device_stub__Z3addPdPKdS1_(double*, double const*, double const*) [0xb697]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:add(double*, double const*, double const*) [0xb6e0]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:main [0xb09a]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__libc_start_call_main in ../sysdeps/nptl/libc_start_call_main.h:58 [0x29d8f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:__libc_start_main in ../csu/libc-start.c:392 [0x29e3f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:_start [0xab24]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+========= 
+========= Invalid __global__ read of size 8 bytes
+=========     at add(double *, const double *, const double *)+0x78 in /home/chris/workspace/cuda_cpp_study/add1.cu:90
+=========     by thread (8,0,0) in block (8,0,0)
+=========     Address 0x7fe064e02040 is out of bounds
+=========     and is 57 bytes after the nearest allocation at 0x7fe064e00000 of size 8,200 bytes
+=========     Saved host backtrace up to driver entry point at kernel launch time
+=========     Host Frame:cuLaunchKernel [0x39fb94]
+=========                in /lib/x86_64-linux-gnu/libcuda.so.1
+=========     Host Frame:libcudart_static_4d8b33a106dceb3c07a56e26de61f2d53bb62a68 [0x110cd]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaLaunchKernel [0x7480d]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaError cudaLaunchKernel<char>(char const*, dim3, dim3, void**, unsigned long, CUstream_st*) [0xb7f5]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__device_stub__Z3addPdPKdS1_(double*, double const*, double const*) [0xb697]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:add(double*, double const*, double const*) [0xb6e0]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:main [0xb09a]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__libc_start_call_main in ../sysdeps/nptl/libc_start_call_main.h:58 [0x29d8f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:__libc_start_main in ../csu/libc-start.c:392 [0x29e3f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:_start [0xab24]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+========= 
+========= Invalid __global__ read of size 8 bytes
+=========     at add(double *, const double *, const double *)+0x78 in /home/chris/workspace/cuda_cpp_study/add1.cu:90
+=========     by thread (9,0,0) in block (8,0,0)
+=========     Address 0x7fe064e02048 is out of bounds
+=========     and is 65 bytes after the nearest allocation at 0x7fe064e00000 of size 8,200 bytes
+=========     Saved host backtrace up to driver entry point at kernel launch time
+=========     Host Frame:cuLaunchKernel [0x39fb94]
+=========                in /lib/x86_64-linux-gnu/libcuda.so.1
+=========     Host Frame:libcudart_static_4d8b33a106dceb3c07a56e26de61f2d53bb62a68 [0x110cd]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaLaunchKernel [0x7480d]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaError cudaLaunchKernel<char>(char const*, dim3, dim3, void**, unsigned long, CUstream_st*) [0xb7f5]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__device_stub__Z3addPdPKdS1_(double*, double const*, double const*) [0xb697]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:add(double*, double const*, double const*) [0xb6e0]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:main [0xb09a]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__libc_start_call_main in ../sysdeps/nptl/libc_start_call_main.h:58 [0x29d8f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:__libc_start_main in ../csu/libc-start.c:392 [0x29e3f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:_start [0xab24]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+========= 
+========= Invalid __global__ read of size 8 bytes
+=========     at add(double *, const double *, const double *)+0x78 in /home/chris/workspace/cuda_cpp_study/add1.cu:90
+=========     by thread (10,0,0) in block (8,0,0)
+=========     Address 0x7fe064e02050 is out of bounds
+=========     and is 73 bytes after the nearest allocation at 0x7fe064e00000 of size 8,200 bytes
+=========     Saved host backtrace up to driver entry point at kernel launch time
+=========     Host Frame:cuLaunchKernel [0x39fb94]
+=========                in /lib/x86_64-linux-gnu/libcuda.so.1
+=========     Host Frame:libcudart_static_4d8b33a106dceb3c07a56e26de61f2d53bb62a68 [0x110cd]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaLaunchKernel [0x7480d]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaError cudaLaunchKernel<char>(char const*, dim3, dim3, void**, unsigned long, CUstream_st*) [0xb7f5]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__device_stub__Z3addPdPKdS1_(double*, double const*, double const*) [0xb697]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:add(double*, double const*, double const*) [0xb6e0]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:main [0xb09a]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__libc_start_call_main in ../sysdeps/nptl/libc_start_call_main.h:58 [0x29d8f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:__libc_start_main in ../csu/libc-start.c:392 [0x29e3f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:_start [0xab24]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+========= 
+========= Invalid __global__ read of size 8 bytes
+=========     at add(double *, const double *, const double *)+0x78 in /home/chris/workspace/cuda_cpp_study/add1.cu:90
+=========     by thread (11,0,0) in block (8,0,0)
+=========     Address 0x7fe064e02058 is out of bounds
+=========     and is 81 bytes after the nearest allocation at 0x7fe064e00000 of size 8,200 bytes
+=========     Saved host backtrace up to driver entry point at kernel launch time
+=========     Host Frame:cuLaunchKernel [0x39fb94]
+=========                in /lib/x86_64-linux-gnu/libcuda.so.1
+=========     Host Frame:libcudart_static_4d8b33a106dceb3c07a56e26de61f2d53bb62a68 [0x110cd]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaLaunchKernel [0x7480d]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaError cudaLaunchKernel<char>(char const*, dim3, dim3, void**, unsigned long, CUstream_st*) [0xb7f5]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__device_stub__Z3addPdPKdS1_(double*, double const*, double const*) [0xb697]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:add(double*, double const*, double const*) [0xb6e0]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:main [0xb09a]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__libc_start_call_main in ../sysdeps/nptl/libc_start_call_main.h:58 [0x29d8f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:__libc_start_main in ../csu/libc-start.c:392 [0x29e3f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:_start [0xab24]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+========= 
+========= Invalid __global__ read of size 8 bytes
+=========     at add(double *, const double *, const double *)+0x78 in /home/chris/workspace/cuda_cpp_study/add1.cu:90
+=========     by thread (12,0,0) in block (8,0,0)
+=========     Address 0x7fe064e02060 is out of bounds
+=========     and is 89 bytes after the nearest allocation at 0x7fe064e00000 of size 8,200 bytes
+=========     Saved host backtrace up to driver entry point at kernel launch time
+=========     Host Frame:cuLaunchKernel [0x39fb94]
+=========                in /lib/x86_64-linux-gnu/libcuda.so.1
+=========     Host Frame:libcudart_static_4d8b33a106dceb3c07a56e26de61f2d53bb62a68 [0x110cd]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaLaunchKernel [0x7480d]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaError cudaLaunchKernel<char>(char const*, dim3, dim3, void**, unsigned long, CUstream_st*) [0xb7f5]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__device_stub__Z3addPdPKdS1_(double*, double const*, double const*) [0xb697]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:add(double*, double const*, double const*) [0xb6e0]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:main [0xb09a]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__libc_start_call_main in ../sysdeps/nptl/libc_start_call_main.h:58 [0x29d8f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:__libc_start_main in ../csu/libc-start.c:392 [0x29e3f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:_start [0xab24]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+========= 
+========= Invalid __global__ read of size 8 bytes
+=========     at add(double *, const double *, const double *)+0x78 in /home/chris/workspace/cuda_cpp_study/add1.cu:90
+=========     by thread (13,0,0) in block (8,0,0)
+=========     Address 0x7fe064e02068 is out of bounds
+=========     and is 97 bytes after the nearest allocation at 0x7fe064e00000 of size 8,200 bytes
+=========     Saved host backtrace up to driver entry point at kernel launch time
+=========     Host Frame:cuLaunchKernel [0x39fb94]
+=========                in /lib/x86_64-linux-gnu/libcuda.so.1
+=========     Host Frame:libcudart_static_4d8b33a106dceb3c07a56e26de61f2d53bb62a68 [0x110cd]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaLaunchKernel [0x7480d]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaError cudaLaunchKernel<char>(char const*, dim3, dim3, void**, unsigned long, CUstream_st*) [0xb7f5]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__device_stub__Z3addPdPKdS1_(double*, double const*, double const*) [0xb697]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:add(double*, double const*, double const*) [0xb6e0]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:main [0xb09a]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__libc_start_call_main in ../sysdeps/nptl/libc_start_call_main.h:58 [0x29d8f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:__libc_start_main in ../csu/libc-start.c:392 [0x29e3f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:_start [0xab24]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+========= 
+========= Invalid __global__ read of size 8 bytes
+=========     at add(double *, const double *, const double *)+0x78 in /home/chris/workspace/cuda_cpp_study/add1.cu:90
+=========     by thread (14,0,0) in block (8,0,0)
+=========     Address 0x7fe064e02070 is out of bounds
+=========     and is 105 bytes after the nearest allocation at 0x7fe064e00000 of size 8,200 bytes
+=========     Saved host backtrace up to driver entry point at kernel launch time
+=========     Host Frame:cuLaunchKernel [0x39fb94]
+=========                in /lib/x86_64-linux-gnu/libcuda.so.1
+=========     Host Frame:libcudart_static_4d8b33a106dceb3c07a56e26de61f2d53bb62a68 [0x110cd]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaLaunchKernel [0x7480d]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaError cudaLaunchKernel<char>(char const*, dim3, dim3, void**, unsigned long, CUstream_st*) [0xb7f5]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__device_stub__Z3addPdPKdS1_(double*, double const*, double const*) [0xb697]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:add(double*, double const*, double const*) [0xb6e0]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:main [0xb09a]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__libc_start_call_main in ../sysdeps/nptl/libc_start_call_main.h:58 [0x29d8f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:__libc_start_main in ../csu/libc-start.c:392 [0x29e3f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:_start [0xab24]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+========= 
+========= Invalid __global__ read of size 8 bytes
+=========     at add(double *, const double *, const double *)+0x78 in /home/chris/workspace/cuda_cpp_study/add1.cu:90
+=========     by thread (15,0,0) in block (8,0,0)
+=========     Address 0x7fe064e02078 is out of bounds
+=========     and is 113 bytes after the nearest allocation at 0x7fe064e00000 of size 8,200 bytes
+=========     Saved host backtrace up to driver entry point at kernel launch time
+=========     Host Frame:cuLaunchKernel [0x39fb94]
+=========                in /lib/x86_64-linux-gnu/libcuda.so.1
+=========     Host Frame:libcudart_static_4d8b33a106dceb3c07a56e26de61f2d53bb62a68 [0x110cd]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaLaunchKernel [0x7480d]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaError cudaLaunchKernel<char>(char const*, dim3, dim3, void**, unsigned long, CUstream_st*) [0xb7f5]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__device_stub__Z3addPdPKdS1_(double*, double const*, double const*) [0xb697]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:add(double*, double const*, double const*) [0xb6e0]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:main [0xb09a]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__libc_start_call_main in ../sysdeps/nptl/libc_start_call_main.h:58 [0x29d8f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:__libc_start_main in ../csu/libc-start.c:392 [0x29e3f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:_start [0xab24]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+========= 
+========= Invalid __global__ read of size 8 bytes
+=========     at add(double *, const double *, const double *)+0x78 in /home/chris/workspace/cuda_cpp_study/add1.cu:90
+=========     by thread (16,0,0) in block (8,0,0)
+=========     Address 0x7fe064e02080 is out of bounds
+=========     and is 121 bytes after the nearest allocation at 0x7fe064e00000 of size 8,200 bytes
+=========     Saved host backtrace up to driver entry point at kernel launch time
+=========     Host Frame:cuLaunchKernel [0x39fb94]
+=========                in /lib/x86_64-linux-gnu/libcuda.so.1
+=========     Host Frame:libcudart_static_4d8b33a106dceb3c07a56e26de61f2d53bb62a68 [0x110cd]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaLaunchKernel [0x7480d]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaError cudaLaunchKernel<char>(char const*, dim3, dim3, void**, unsigned long, CUstream_st*) [0xb7f5]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__device_stub__Z3addPdPKdS1_(double*, double const*, double const*) [0xb697]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:add(double*, double const*, double const*) [0xb6e0]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:main [0xb09a]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__libc_start_call_main in ../sysdeps/nptl/libc_start_call_main.h:58 [0x29d8f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:__libc_start_main in ../csu/libc-start.c:392 [0x29e3f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:_start [0xab24]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+========= 
+========= Invalid __global__ read of size 8 bytes
+=========     at add(double *, const double *, const double *)+0x78 in /home/chris/workspace/cuda_cpp_study/add1.cu:90
+=========     by thread (17,0,0) in block (8,0,0)
+=========     Address 0x7fe064e02088 is out of bounds
+=========     and is 129 bytes after the nearest allocation at 0x7fe064e00000 of size 8,200 bytes
+=========     Saved host backtrace up to driver entry point at kernel launch time
+=========     Host Frame:cuLaunchKernel [0x39fb94]
+=========                in /lib/x86_64-linux-gnu/libcuda.so.1
+=========     Host Frame:libcudart_static_4d8b33a106dceb3c07a56e26de61f2d53bb62a68 [0x110cd]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaLaunchKernel [0x7480d]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaError cudaLaunchKernel<char>(char const*, dim3, dim3, void**, unsigned long, CUstream_st*) [0xb7f5]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__device_stub__Z3addPdPKdS1_(double*, double const*, double const*) [0xb697]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:add(double*, double const*, double const*) [0xb6e0]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:main [0xb09a]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__libc_start_call_main in ../sysdeps/nptl/libc_start_call_main.h:58 [0x29d8f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:__libc_start_main in ../csu/libc-start.c:392 [0x29e3f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:_start [0xab24]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+========= 
+========= Invalid __global__ read of size 8 bytes
+=========     at add(double *, const double *, const double *)+0x78 in /home/chris/workspace/cuda_cpp_study/add1.cu:90
+=========     by thread (18,0,0) in block (8,0,0)
+=========     Address 0x7fe064e02090 is out of bounds
+=========     and is 137 bytes after the nearest allocation at 0x7fe064e00000 of size 8,200 bytes
+=========     Saved host backtrace up to driver entry point at kernel launch time
+=========     Host Frame:cuLaunchKernel [0x39fb94]
+=========                in /lib/x86_64-linux-gnu/libcuda.so.1
+=========     Host Frame:libcudart_static_4d8b33a106dceb3c07a56e26de61f2d53bb62a68 [0x110cd]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaLaunchKernel [0x7480d]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaError cudaLaunchKernel<char>(char const*, dim3, dim3, void**, unsigned long, CUstream_st*) [0xb7f5]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__device_stub__Z3addPdPKdS1_(double*, double const*, double const*) [0xb697]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:add(double*, double const*, double const*) [0xb6e0]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:main [0xb09a]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__libc_start_call_main in ../sysdeps/nptl/libc_start_call_main.h:58 [0x29d8f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:__libc_start_main in ../csu/libc-start.c:392 [0x29e3f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:_start [0xab24]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+========= 
+========= Invalid __global__ read of size 8 bytes
+=========     at add(double *, const double *, const double *)+0x78 in /home/chris/workspace/cuda_cpp_study/add1.cu:90
+=========     by thread (19,0,0) in block (8,0,0)
+=========     Address 0x7fe064e02098 is out of bounds
+=========     and is 145 bytes after the nearest allocation at 0x7fe064e00000 of size 8,200 bytes
+=========     Saved host backtrace up to driver entry point at kernel launch time
+=========     Host Frame:cuLaunchKernel [0x39fb94]
+=========                in /lib/x86_64-linux-gnu/libcuda.so.1
+=========     Host Frame:libcudart_static_4d8b33a106dceb3c07a56e26de61f2d53bb62a68 [0x110cd]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaLaunchKernel [0x7480d]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaError cudaLaunchKernel<char>(char const*, dim3, dim3, void**, unsigned long, CUstream_st*) [0xb7f5]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__device_stub__Z3addPdPKdS1_(double*, double const*, double const*) [0xb697]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:add(double*, double const*, double const*) [0xb6e0]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:main [0xb09a]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__libc_start_call_main in ../sysdeps/nptl/libc_start_call_main.h:58 [0x29d8f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:__libc_start_main in ../csu/libc-start.c:392 [0x29e3f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:_start [0xab24]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+========= 
+========= Invalid __global__ read of size 8 bytes
+=========     at add(double *, const double *, const double *)+0x78 in /home/chris/workspace/cuda_cpp_study/add1.cu:90
+=========     by thread (20,0,0) in block (8,0,0)
+=========     Address 0x7fe064e020a0 is out of bounds
+=========     and is 153 bytes after the nearest allocation at 0x7fe064e00000 of size 8,200 bytes
+=========     Saved host backtrace up to driver entry point at kernel launch time
+=========     Host Frame:cuLaunchKernel [0x39fb94]
+=========                in /lib/x86_64-linux-gnu/libcuda.so.1
+=========     Host Frame:libcudart_static_4d8b33a106dceb3c07a56e26de61f2d53bb62a68 [0x110cd]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaLaunchKernel [0x7480d]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaError cudaLaunchKernel<char>(char const*, dim3, dim3, void**, unsigned long, CUstream_st*) [0xb7f5]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__device_stub__Z3addPdPKdS1_(double*, double const*, double const*) [0xb697]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:add(double*, double const*, double const*) [0xb6e0]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:main [0xb09a]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__libc_start_call_main in ../sysdeps/nptl/libc_start_call_main.h:58 [0x29d8f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:__libc_start_main in ../csu/libc-start.c:392 [0x29e3f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:_start [0xab24]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+========= 
+========= Invalid __global__ read of size 8 bytes
+=========     at add(double *, const double *, const double *)+0x78 in /home/chris/workspace/cuda_cpp_study/add1.cu:90
+=========     by thread (21,0,0) in block (8,0,0)
+=========     Address 0x7fe064e020a8 is out of bounds
+=========     and is 161 bytes after the nearest allocation at 0x7fe064e00000 of size 8,200 bytes
+=========     Saved host backtrace up to driver entry point at kernel launch time
+=========     Host Frame:cuLaunchKernel [0x39fb94]
+=========                in /lib/x86_64-linux-gnu/libcuda.so.1
+=========     Host Frame:libcudart_static_4d8b33a106dceb3c07a56e26de61f2d53bb62a68 [0x110cd]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaLaunchKernel [0x7480d]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaError cudaLaunchKernel<char>(char const*, dim3, dim3, void**, unsigned long, CUstream_st*) [0xb7f5]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__device_stub__Z3addPdPKdS1_(double*, double const*, double const*) [0xb697]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:add(double*, double const*, double const*) [0xb6e0]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:main [0xb09a]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__libc_start_call_main in ../sysdeps/nptl/libc_start_call_main.h:58 [0x29d8f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:__libc_start_main in ../csu/libc-start.c:392 [0x29e3f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:_start [0xab24]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+========= 
+========= Invalid __global__ read of size 8 bytes
+=========     at add(double *, const double *, const double *)+0x78 in /home/chris/workspace/cuda_cpp_study/add1.cu:90
+=========     by thread (22,0,0) in block (8,0,0)
+=========     Address 0x7fe064e020b0 is out of bounds
+=========     and is 169 bytes after the nearest allocation at 0x7fe064e00000 of size 8,200 bytes
+=========     Saved host backtrace up to driver entry point at kernel launch time
+=========     Host Frame:cuLaunchKernel [0x39fb94]
+=========                in /lib/x86_64-linux-gnu/libcuda.so.1
+=========     Host Frame:libcudart_static_4d8b33a106dceb3c07a56e26de61f2d53bb62a68 [0x110cd]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaLaunchKernel [0x7480d]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaError cudaLaunchKernel<char>(char const*, dim3, dim3, void**, unsigned long, CUstream_st*) [0xb7f5]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__device_stub__Z3addPdPKdS1_(double*, double const*, double const*) [0xb697]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:add(double*, double const*, double const*) [0xb6e0]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:main [0xb09a]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__libc_start_call_main in ../sysdeps/nptl/libc_start_call_main.h:58 [0x29d8f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:__libc_start_main in ../csu/libc-start.c:392 [0x29e3f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:_start [0xab24]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+========= 
+========= Invalid __global__ read of size 8 bytes
+=========     at add(double *, const double *, const double *)+0x78 in /home/chris/workspace/cuda_cpp_study/add1.cu:90
+=========     by thread (23,0,0) in block (8,0,0)
+=========     Address 0x7fe064e020b8 is out of bounds
+=========     and is 177 bytes after the nearest allocation at 0x7fe064e00000 of size 8,200 bytes
+=========     Saved host backtrace up to driver entry point at kernel launch time
+=========     Host Frame:cuLaunchKernel [0x39fb94]
+=========                in /lib/x86_64-linux-gnu/libcuda.so.1
+=========     Host Frame:libcudart_static_4d8b33a106dceb3c07a56e26de61f2d53bb62a68 [0x110cd]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaLaunchKernel [0x7480d]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaError cudaLaunchKernel<char>(char const*, dim3, dim3, void**, unsigned long, CUstream_st*) [0xb7f5]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__device_stub__Z3addPdPKdS1_(double*, double const*, double const*) [0xb697]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:add(double*, double const*, double const*) [0xb6e0]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:main [0xb09a]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__libc_start_call_main in ../sysdeps/nptl/libc_start_call_main.h:58 [0x29d8f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:__libc_start_main in ../csu/libc-start.c:392 [0x29e3f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:_start [0xab24]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+========= 
+========= Invalid __global__ read of size 8 bytes
+=========     at add(double *, const double *, const double *)+0x78 in /home/chris/workspace/cuda_cpp_study/add1.cu:90
+=========     by thread (24,0,0) in block (8,0,0)
+=========     Address 0x7fe064e020c0 is out of bounds
+=========     and is 185 bytes after the nearest allocation at 0x7fe064e00000 of size 8,200 bytes
+=========     Saved host backtrace up to driver entry point at kernel launch time
+=========     Host Frame:cuLaunchKernel [0x39fb94]
+=========                in /lib/x86_64-linux-gnu/libcuda.so.1
+=========     Host Frame:libcudart_static_4d8b33a106dceb3c07a56e26de61f2d53bb62a68 [0x110cd]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaLaunchKernel [0x7480d]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaError cudaLaunchKernel<char>(char const*, dim3, dim3, void**, unsigned long, CUstream_st*) [0xb7f5]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__device_stub__Z3addPdPKdS1_(double*, double const*, double const*) [0xb697]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:add(double*, double const*, double const*) [0xb6e0]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:main [0xb09a]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__libc_start_call_main in ../sysdeps/nptl/libc_start_call_main.h:58 [0x29d8f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:__libc_start_main in ../csu/libc-start.c:392 [0x29e3f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:_start [0xab24]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+========= 
+========= Invalid __global__ read of size 8 bytes
+=========     at add(double *, const double *, const double *)+0x78 in /home/chris/workspace/cuda_cpp_study/add1.cu:90
+=========     by thread (25,0,0) in block (8,0,0)
+=========     Address 0x7fe064e020c8 is out of bounds
+=========     and is 193 bytes after the nearest allocation at 0x7fe064e00000 of size 8,200 bytes
+=========     Saved host backtrace up to driver entry point at kernel launch time
+=========     Host Frame:cuLaunchKernel [0x39fb94]
+=========                in /lib/x86_64-linux-gnu/libcuda.so.1
+=========     Host Frame:libcudart_static_4d8b33a106dceb3c07a56e26de61f2d53bb62a68 [0x110cd]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaLaunchKernel [0x7480d]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaError cudaLaunchKernel<char>(char const*, dim3, dim3, void**, unsigned long, CUstream_st*) [0xb7f5]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__device_stub__Z3addPdPKdS1_(double*, double const*, double const*) [0xb697]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:add(double*, double const*, double const*) [0xb6e0]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:main [0xb09a]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__libc_start_call_main in ../sysdeps/nptl/libc_start_call_main.h:58 [0x29d8f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:__libc_start_main in ../csu/libc-start.c:392 [0x29e3f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:_start [0xab24]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+========= 
+========= Invalid __global__ read of size 8 bytes
+=========     at add(double *, const double *, const double *)+0x78 in /home/chris/workspace/cuda_cpp_study/add1.cu:90
+=========     by thread (26,0,0) in block (8,0,0)
+=========     Address 0x7fe064e020d0 is out of bounds
+=========     and is 201 bytes after the nearest allocation at 0x7fe064e00000 of size 8,200 bytes
+=========     Saved host backtrace up to driver entry point at kernel launch time
+=========     Host Frame:cuLaunchKernel [0x39fb94]
+=========                in /lib/x86_64-linux-gnu/libcuda.so.1
+=========     Host Frame:libcudart_static_4d8b33a106dceb3c07a56e26de61f2d53bb62a68 [0x110cd]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaLaunchKernel [0x7480d]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaError cudaLaunchKernel<char>(char const*, dim3, dim3, void**, unsigned long, CUstream_st*) [0xb7f5]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__device_stub__Z3addPdPKdS1_(double*, double const*, double const*) [0xb697]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:add(double*, double const*, double const*) [0xb6e0]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:main [0xb09a]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__libc_start_call_main in ../sysdeps/nptl/libc_start_call_main.h:58 [0x29d8f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:__libc_start_main in ../csu/libc-start.c:392 [0x29e3f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:_start [0xab24]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+========= 
+========= Invalid __global__ read of size 8 bytes
+=========     at add(double *, const double *, const double *)+0x78 in /home/chris/workspace/cuda_cpp_study/add1.cu:90
+=========     by thread (27,0,0) in block (8,0,0)
+=========     Address 0x7fe064e020d8 is out of bounds
+=========     and is 209 bytes after the nearest allocation at 0x7fe064e00000 of size 8,200 bytes
+=========     Saved host backtrace up to driver entry point at kernel launch time
+=========     Host Frame:cuLaunchKernel [0x39fb94]
+=========                in /lib/x86_64-linux-gnu/libcuda.so.1
+=========     Host Frame:libcudart_static_4d8b33a106dceb3c07a56e26de61f2d53bb62a68 [0x110cd]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaLaunchKernel [0x7480d]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaError cudaLaunchKernel<char>(char const*, dim3, dim3, void**, unsigned long, CUstream_st*) [0xb7f5]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__device_stub__Z3addPdPKdS1_(double*, double const*, double const*) [0xb697]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:add(double*, double const*, double const*) [0xb6e0]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:main [0xb09a]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__libc_start_call_main in ../sysdeps/nptl/libc_start_call_main.h:58 [0x29d8f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:__libc_start_main in ../csu/libc-start.c:392 [0x29e3f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:_start [0xab24]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+========= 
+========= Invalid __global__ read of size 8 bytes
+=========     at add(double *, const double *, const double *)+0x78 in /home/chris/workspace/cuda_cpp_study/add1.cu:90
+=========     by thread (28,0,0) in block (8,0,0)
+=========     Address 0x7fe064e020e0 is out of bounds
+=========     and is 217 bytes after the nearest allocation at 0x7fe064e00000 of size 8,200 bytes
+=========     Saved host backtrace up to driver entry point at kernel launch time
+=========     Host Frame:cuLaunchKernel [0x39fb94]
+=========                in /lib/x86_64-linux-gnu/libcuda.so.1
+=========     Host Frame:libcudart_static_4d8b33a106dceb3c07a56e26de61f2d53bb62a68 [0x110cd]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaLaunchKernel [0x7480d]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaError cudaLaunchKernel<char>(char const*, dim3, dim3, void**, unsigned long, CUstream_st*) [0xb7f5]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__device_stub__Z3addPdPKdS1_(double*, double const*, double const*) [0xb697]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:add(double*, double const*, double const*) [0xb6e0]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:main [0xb09a]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__libc_start_call_main in ../sysdeps/nptl/libc_start_call_main.h:58 [0x29d8f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:__libc_start_main in ../csu/libc-start.c:392 [0x29e3f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:_start [0xab24]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+========= 
+========= Invalid __global__ read of size 8 bytes
+=========     at add(double *, const double *, const double *)+0x78 in /home/chris/workspace/cuda_cpp_study/add1.cu:90
+=========     by thread (29,0,0) in block (8,0,0)
+=========     Address 0x7fe064e020e8 is out of bounds
+=========     and is 225 bytes after the nearest allocation at 0x7fe064e00000 of size 8,200 bytes
+=========     Saved host backtrace up to driver entry point at kernel launch time
+=========     Host Frame:cuLaunchKernel [0x39fb94]
+=========                in /lib/x86_64-linux-gnu/libcuda.so.1
+=========     Host Frame:libcudart_static_4d8b33a106dceb3c07a56e26de61f2d53bb62a68 [0x110cd]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaLaunchKernel [0x7480d]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaError cudaLaunchKernel<char>(char const*, dim3, dim3, void**, unsigned long, CUstream_st*) [0xb7f5]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__device_stub__Z3addPdPKdS1_(double*, double const*, double const*) [0xb697]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:add(double*, double const*, double const*) [0xb6e0]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:main [0xb09a]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__libc_start_call_main in ../sysdeps/nptl/libc_start_call_main.h:58 [0x29d8f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:__libc_start_main in ../csu/libc-start.c:392 [0x29e3f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:_start [0xab24]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+========= 
+========= Invalid __global__ read of size 8 bytes
+=========     at add(double *, const double *, const double *)+0x78 in /home/chris/workspace/cuda_cpp_study/add1.cu:90
+=========     by thread (30,0,0) in block (8,0,0)
+=========     Address 0x7fe064e020f0 is out of bounds
+=========     and is 233 bytes after the nearest allocation at 0x7fe064e00000 of size 8,200 bytes
+=========     Saved host backtrace up to driver entry point at kernel launch time
+=========     Host Frame:cuLaunchKernel [0x39fb94]
+=========                in /lib/x86_64-linux-gnu/libcuda.so.1
+=========     Host Frame:libcudart_static_4d8b33a106dceb3c07a56e26de61f2d53bb62a68 [0x110cd]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaLaunchKernel [0x7480d]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaError cudaLaunchKernel<char>(char const*, dim3, dim3, void**, unsigned long, CUstream_st*) [0xb7f5]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__device_stub__Z3addPdPKdS1_(double*, double const*, double const*) [0xb697]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:add(double*, double const*, double const*) [0xb6e0]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:main [0xb09a]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__libc_start_call_main in ../sysdeps/nptl/libc_start_call_main.h:58 [0x29d8f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:__libc_start_main in ../csu/libc-start.c:392 [0x29e3f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:_start [0xab24]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+========= 
+========= Invalid __global__ read of size 8 bytes
+=========     at add(double *, const double *, const double *)+0x78 in /home/chris/workspace/cuda_cpp_study/add1.cu:90
+=========     by thread (31,0,0) in block (8,0,0)
+=========     Address 0x7fe064e020f8 is out of bounds
+=========     and is 241 bytes after the nearest allocation at 0x7fe064e00000 of size 8,200 bytes
+=========     Saved host backtrace up to driver entry point at kernel launch time
+=========     Host Frame:cuLaunchKernel [0x39fb94]
+=========                in /lib/x86_64-linux-gnu/libcuda.so.1
+=========     Host Frame:libcudart_static_4d8b33a106dceb3c07a56e26de61f2d53bb62a68 [0x110cd]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaLaunchKernel [0x7480d]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaError cudaLaunchKernel<char>(char const*, dim3, dim3, void**, unsigned long, CUstream_st*) [0xb7f5]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__device_stub__Z3addPdPKdS1_(double*, double const*, double const*) [0xb697]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:add(double*, double const*, double const*) [0xb6e0]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:main [0xb09a]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__libc_start_call_main in ../sysdeps/nptl/libc_start_call_main.h:58 [0x29d8f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:__libc_start_main in ../csu/libc-start.c:392 [0x29e3f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:_start [0xab24]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+========= 
+========= Invalid __global__ read of size 8 bytes
+=========     at add(double *, const double *, const double *)+0x78 in /home/chris/workspace/cuda_cpp_study/add1.cu:90
+=========     by thread (32,0,0) in block (8,0,0)
+=========     Address 0x7fe064e02100 is out of bounds
+=========     and is 249 bytes after the nearest allocation at 0x7fe064e00000 of size 8,200 bytes
+=========     Saved host backtrace up to driver entry point at kernel launch time
+=========     Host Frame:cuLaunchKernel [0x39fb94]
+=========                in /lib/x86_64-linux-gnu/libcuda.so.1
+=========     Host Frame:libcudart_static_4d8b33a106dceb3c07a56e26de61f2d53bb62a68 [0x110cd]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaLaunchKernel [0x7480d]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaError cudaLaunchKernel<char>(char const*, dim3, dim3, void**, unsigned long, CUstream_st*) [0xb7f5]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__device_stub__Z3addPdPKdS1_(double*, double const*, double const*) [0xb697]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:add(double*, double const*, double const*) [0xb6e0]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:main [0xb09a]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__libc_start_call_main in ../sysdeps/nptl/libc_start_call_main.h:58 [0x29d8f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:__libc_start_main in ../csu/libc-start.c:392 [0x29e3f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:_start [0xab24]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+========= 
+========= Invalid __global__ read of size 8 bytes
+=========     at add(double *, const double *, const double *)+0x78 in /home/chris/workspace/cuda_cpp_study/add1.cu:90
+=========     by thread (33,0,0) in block (8,0,0)
+=========     Address 0x7fe064e02108 is out of bounds
+=========     and is 248 bytes before the nearest allocation at 0x7fe064e02200 of size 8,200 bytes
+=========     Saved host backtrace up to driver entry point at kernel launch time
+=========     Host Frame:cuLaunchKernel [0x39fb94]
+=========                in /lib/x86_64-linux-gnu/libcuda.so.1
+=========     Host Frame:libcudart_static_4d8b33a106dceb3c07a56e26de61f2d53bb62a68 [0x110cd]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaLaunchKernel [0x7480d]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaError cudaLaunchKernel<char>(char const*, dim3, dim3, void**, unsigned long, CUstream_st*) [0xb7f5]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__device_stub__Z3addPdPKdS1_(double*, double const*, double const*) [0xb697]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:add(double*, double const*, double const*) [0xb6e0]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:main [0xb09a]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__libc_start_call_main in ../sysdeps/nptl/libc_start_call_main.h:58 [0x29d8f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:__libc_start_main in ../csu/libc-start.c:392 [0x29e3f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:_start [0xab24]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+========= 
+========= Invalid __global__ read of size 8 bytes
+=========     at add(double *, const double *, const double *)+0x78 in /home/chris/workspace/cuda_cpp_study/add1.cu:90
+=========     by thread (34,0,0) in block (8,0,0)
+=========     Address 0x7fe064e02110 is out of bounds
+=========     and is 240 bytes before the nearest allocation at 0x7fe064e02200 of size 8,200 bytes
+=========     Saved host backtrace up to driver entry point at kernel launch time
+=========     Host Frame:cuLaunchKernel [0x39fb94]
+=========                in /lib/x86_64-linux-gnu/libcuda.so.1
+=========     Host Frame:libcudart_static_4d8b33a106dceb3c07a56e26de61f2d53bb62a68 [0x110cd]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaLaunchKernel [0x7480d]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaError cudaLaunchKernel<char>(char const*, dim3, dim3, void**, unsigned long, CUstream_st*) [0xb7f5]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__device_stub__Z3addPdPKdS1_(double*, double const*, double const*) [0xb697]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:add(double*, double const*, double const*) [0xb6e0]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:main [0xb09a]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__libc_start_call_main in ../sysdeps/nptl/libc_start_call_main.h:58 [0x29d8f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:__libc_start_main in ../csu/libc-start.c:392 [0x29e3f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:_start [0xab24]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+========= 
+========= Invalid __global__ read of size 8 bytes
+=========     at add(double *, const double *, const double *)+0x78 in /home/chris/workspace/cuda_cpp_study/add1.cu:90
+=========     by thread (35,0,0) in block (8,0,0)
+=========     Address 0x7fe064e02118 is out of bounds
+=========     and is 232 bytes before the nearest allocation at 0x7fe064e02200 of size 8,200 bytes
+=========     Saved host backtrace up to driver entry point at kernel launch time
+=========     Host Frame:cuLaunchKernel [0x39fb94]
+=========                in /lib/x86_64-linux-gnu/libcuda.so.1
+=========     Host Frame:libcudart_static_4d8b33a106dceb3c07a56e26de61f2d53bb62a68 [0x110cd]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaLaunchKernel [0x7480d]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaError cudaLaunchKernel<char>(char const*, dim3, dim3, void**, unsigned long, CUstream_st*) [0xb7f5]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__device_stub__Z3addPdPKdS1_(double*, double const*, double const*) [0xb697]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:add(double*, double const*, double const*) [0xb6e0]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:main [0xb09a]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__libc_start_call_main in ../sysdeps/nptl/libc_start_call_main.h:58 [0x29d8f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:__libc_start_main in ../csu/libc-start.c:392 [0x29e3f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:_start [0xab24]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+========= 
+========= Invalid __global__ read of size 8 bytes
+=========     at add(double *, const double *, const double *)+0x78 in /home/chris/workspace/cuda_cpp_study/add1.cu:90
+=========     by thread (36,0,0) in block (8,0,0)
+=========     Address 0x7fe064e02120 is out of bounds
+=========     and is 224 bytes before the nearest allocation at 0x7fe064e02200 of size 8,200 bytes
+=========     Saved host backtrace up to driver entry point at kernel launch time
+=========     Host Frame:cuLaunchKernel [0x39fb94]
+=========                in /lib/x86_64-linux-gnu/libcuda.so.1
+=========     Host Frame:libcudart_static_4d8b33a106dceb3c07a56e26de61f2d53bb62a68 [0x110cd]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaLaunchKernel [0x7480d]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaError cudaLaunchKernel<char>(char const*, dim3, dim3, void**, unsigned long, CUstream_st*) [0xb7f5]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__device_stub__Z3addPdPKdS1_(double*, double const*, double const*) [0xb697]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:add(double*, double const*, double const*) [0xb6e0]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:main [0xb09a]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__libc_start_call_main in ../sysdeps/nptl/libc_start_call_main.h:58 [0x29d8f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:__libc_start_main in ../csu/libc-start.c:392 [0x29e3f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:_start [0xab24]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+========= 
+========= Invalid __global__ read of size 8 bytes
+=========     at add(double *, const double *, const double *)+0x78 in /home/chris/workspace/cuda_cpp_study/add1.cu:90
+=========     by thread (37,0,0) in block (8,0,0)
+=========     Address 0x7fe064e02128 is out of bounds
+=========     and is 216 bytes before the nearest allocation at 0x7fe064e02200 of size 8,200 bytes
+=========     Saved host backtrace up to driver entry point at kernel launch time
+=========     Host Frame:cuLaunchKernel [0x39fb94]
+=========                in /lib/x86_64-linux-gnu/libcuda.so.1
+=========     Host Frame:libcudart_static_4d8b33a106dceb3c07a56e26de61f2d53bb62a68 [0x110cd]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaLaunchKernel [0x7480d]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaError cudaLaunchKernel<char>(char const*, dim3, dim3, void**, unsigned long, CUstream_st*) [0xb7f5]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__device_stub__Z3addPdPKdS1_(double*, double const*, double const*) [0xb697]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:add(double*, double const*, double const*) [0xb6e0]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:main [0xb09a]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__libc_start_call_main in ../sysdeps/nptl/libc_start_call_main.h:58 [0x29d8f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:__libc_start_main in ../csu/libc-start.c:392 [0x29e3f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:_start [0xab24]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+========= 
+========= Invalid __global__ read of size 8 bytes
+=========     at add(double *, const double *, const double *)+0x78 in /home/chris/workspace/cuda_cpp_study/add1.cu:90
+=========     by thread (38,0,0) in block (8,0,0)
+=========     Address 0x7fe064e02130 is out of bounds
+=========     and is 208 bytes before the nearest allocation at 0x7fe064e02200 of size 8,200 bytes
+=========     Saved host backtrace up to driver entry point at kernel launch time
+=========     Host Frame:cuLaunchKernel [0x39fb94]
+=========                in /lib/x86_64-linux-gnu/libcuda.so.1
+=========     Host Frame:libcudart_static_4d8b33a106dceb3c07a56e26de61f2d53bb62a68 [0x110cd]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaLaunchKernel [0x7480d]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaError cudaLaunchKernel<char>(char const*, dim3, dim3, void**, unsigned long, CUstream_st*) [0xb7f5]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__device_stub__Z3addPdPKdS1_(double*, double const*, double const*) [0xb697]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:add(double*, double const*, double const*) [0xb6e0]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:main [0xb09a]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__libc_start_call_main in ../sysdeps/nptl/libc_start_call_main.h:58 [0x29d8f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:__libc_start_main in ../csu/libc-start.c:392 [0x29e3f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:_start [0xab24]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+========= 
+========= Invalid __global__ read of size 8 bytes
+=========     at add(double *, const double *, const double *)+0x78 in /home/chris/workspace/cuda_cpp_study/add1.cu:90
+=========     by thread (39,0,0) in block (8,0,0)
+=========     Address 0x7fe064e02138 is out of bounds
+=========     and is 200 bytes before the nearest allocation at 0x7fe064e02200 of size 8,200 bytes
+=========     Saved host backtrace up to driver entry point at kernel launch time
+=========     Host Frame:cuLaunchKernel [0x39fb94]
+=========                in /lib/x86_64-linux-gnu/libcuda.so.1
+=========     Host Frame:libcudart_static_4d8b33a106dceb3c07a56e26de61f2d53bb62a68 [0x110cd]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaLaunchKernel [0x7480d]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaError cudaLaunchKernel<char>(char const*, dim3, dim3, void**, unsigned long, CUstream_st*) [0xb7f5]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__device_stub__Z3addPdPKdS1_(double*, double const*, double const*) [0xb697]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:add(double*, double const*, double const*) [0xb6e0]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:main [0xb09a]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__libc_start_call_main in ../sysdeps/nptl/libc_start_call_main.h:58 [0x29d8f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:__libc_start_main in ../csu/libc-start.c:392 [0x29e3f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:_start [0xab24]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+========= 
+========= Invalid __global__ read of size 8 bytes
+=========     at add(double *, const double *, const double *)+0x78 in /home/chris/workspace/cuda_cpp_study/add1.cu:90
+=========     by thread (40,0,0) in block (8,0,0)
+=========     Address 0x7fe064e02140 is out of bounds
+=========     and is 192 bytes before the nearest allocation at 0x7fe064e02200 of size 8,200 bytes
+=========     Saved host backtrace up to driver entry point at kernel launch time
+=========     Host Frame:cuLaunchKernel [0x39fb94]
+=========                in /lib/x86_64-linux-gnu/libcuda.so.1
+=========     Host Frame:libcudart_static_4d8b33a106dceb3c07a56e26de61f2d53bb62a68 [0x110cd]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaLaunchKernel [0x7480d]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaError cudaLaunchKernel<char>(char const*, dim3, dim3, void**, unsigned long, CUstream_st*) [0xb7f5]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__device_stub__Z3addPdPKdS1_(double*, double const*, double const*) [0xb697]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:add(double*, double const*, double const*) [0xb6e0]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:main [0xb09a]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__libc_start_call_main in ../sysdeps/nptl/libc_start_call_main.h:58 [0x29d8f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:__libc_start_main in ../csu/libc-start.c:392 [0x29e3f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:_start [0xab24]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+========= 
+========= Invalid __global__ read of size 8 bytes
+=========     at add(double *, const double *, const double *)+0x78 in /home/chris/workspace/cuda_cpp_study/add1.cu:90
+=========     by thread (41,0,0) in block (8,0,0)
+=========     Address 0x7fe064e02148 is out of bounds
+=========     and is 184 bytes before the nearest allocation at 0x7fe064e02200 of size 8,200 bytes
+=========     Saved host backtrace up to driver entry point at kernel launch time
+=========     Host Frame:cuLaunchKernel [0x39fb94]
+=========                in /lib/x86_64-linux-gnu/libcuda.so.1
+=========     Host Frame:libcudart_static_4d8b33a106dceb3c07a56e26de61f2d53bb62a68 [0x110cd]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaLaunchKernel [0x7480d]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaError cudaLaunchKernel<char>(char const*, dim3, dim3, void**, unsigned long, CUstream_st*) [0xb7f5]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__device_stub__Z3addPdPKdS1_(double*, double const*, double const*) [0xb697]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:add(double*, double const*, double const*) [0xb6e0]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:main [0xb09a]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__libc_start_call_main in ../sysdeps/nptl/libc_start_call_main.h:58 [0x29d8f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:__libc_start_main in ../csu/libc-start.c:392 [0x29e3f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:_start [0xab24]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+========= 
+========= Invalid __global__ read of size 8 bytes
+=========     at add(double *, const double *, const double *)+0x78 in /home/chris/workspace/cuda_cpp_study/add1.cu:90
+=========     by thread (42,0,0) in block (8,0,0)
+=========     Address 0x7fe064e02150 is out of bounds
+=========     and is 176 bytes before the nearest allocation at 0x7fe064e02200 of size 8,200 bytes
+=========     Saved host backtrace up to driver entry point at kernel launch time
+=========     Host Frame:cuLaunchKernel [0x39fb94]
+=========                in /lib/x86_64-linux-gnu/libcuda.so.1
+=========     Host Frame:libcudart_static_4d8b33a106dceb3c07a56e26de61f2d53bb62a68 [0x110cd]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaLaunchKernel [0x7480d]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaError cudaLaunchKernel<char>(char const*, dim3, dim3, void**, unsigned long, CUstream_st*) [0xb7f5]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__device_stub__Z3addPdPKdS1_(double*, double const*, double const*) [0xb697]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:add(double*, double const*, double const*) [0xb6e0]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:main [0xb09a]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__libc_start_call_main in ../sysdeps/nptl/libc_start_call_main.h:58 [0x29d8f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:__libc_start_main in ../csu/libc-start.c:392 [0x29e3f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:_start [0xab24]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+========= 
+========= Invalid __global__ read of size 8 bytes
+=========     at add(double *, const double *, const double *)+0x78 in /home/chris/workspace/cuda_cpp_study/add1.cu:90
+=========     by thread (43,0,0) in block (8,0,0)
+=========     Address 0x7fe064e02158 is out of bounds
+=========     and is 168 bytes before the nearest allocation at 0x7fe064e02200 of size 8,200 bytes
+=========     Saved host backtrace up to driver entry point at kernel launch time
+=========     Host Frame:cuLaunchKernel [0x39fb94]
+=========                in /lib/x86_64-linux-gnu/libcuda.so.1
+=========     Host Frame:libcudart_static_4d8b33a106dceb3c07a56e26de61f2d53bb62a68 [0x110cd]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaLaunchKernel [0x7480d]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaError cudaLaunchKernel<char>(char const*, dim3, dim3, void**, unsigned long, CUstream_st*) [0xb7f5]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__device_stub__Z3addPdPKdS1_(double*, double const*, double const*) [0xb697]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:add(double*, double const*, double const*) [0xb6e0]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:main [0xb09a]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__libc_start_call_main in ../sysdeps/nptl/libc_start_call_main.h:58 [0x29d8f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:__libc_start_main in ../csu/libc-start.c:392 [0x29e3f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:_start [0xab24]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+========= 
+========= Invalid __global__ read of size 8 bytes
+=========     at add(double *, const double *, const double *)+0x78 in /home/chris/workspace/cuda_cpp_study/add1.cu:90
+=========     by thread (44,0,0) in block (8,0,0)
+=========     Address 0x7fe064e02160 is out of bounds
+=========     and is 160 bytes before the nearest allocation at 0x7fe064e02200 of size 8,200 bytes
+=========     Saved host backtrace up to driver entry point at kernel launch time
+=========     Host Frame:cuLaunchKernel [0x39fb94]
+=========                in /lib/x86_64-linux-gnu/libcuda.so.1
+=========     Host Frame:libcudart_static_4d8b33a106dceb3c07a56e26de61f2d53bb62a68 [0x110cd]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaLaunchKernel [0x7480d]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaError cudaLaunchKernel<char>(char const*, dim3, dim3, void**, unsigned long, CUstream_st*) [0xb7f5]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__device_stub__Z3addPdPKdS1_(double*, double const*, double const*) [0xb697]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:add(double*, double const*, double const*) [0xb6e0]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:main [0xb09a]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__libc_start_call_main in ../sysdeps/nptl/libc_start_call_main.h:58 [0x29d8f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:__libc_start_main in ../csu/libc-start.c:392 [0x29e3f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:_start [0xab24]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+========= 
+========= Invalid __global__ read of size 8 bytes
+=========     at add(double *, const double *, const double *)+0x78 in /home/chris/workspace/cuda_cpp_study/add1.cu:90
+=========     by thread (45,0,0) in block (8,0,0)
+=========     Address 0x7fe064e02168 is out of bounds
+=========     and is 152 bytes before the nearest allocation at 0x7fe064e02200 of size 8,200 bytes
+=========     Saved host backtrace up to driver entry point at kernel launch time
+=========     Host Frame:cuLaunchKernel [0x39fb94]
+=========                in /lib/x86_64-linux-gnu/libcuda.so.1
+=========     Host Frame:libcudart_static_4d8b33a106dceb3c07a56e26de61f2d53bb62a68 [0x110cd]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaLaunchKernel [0x7480d]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaError cudaLaunchKernel<char>(char const*, dim3, dim3, void**, unsigned long, CUstream_st*) [0xb7f5]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__device_stub__Z3addPdPKdS1_(double*, double const*, double const*) [0xb697]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:add(double*, double const*, double const*) [0xb6e0]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:main [0xb09a]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__libc_start_call_main in ../sysdeps/nptl/libc_start_call_main.h:58 [0x29d8f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:__libc_start_main in ../csu/libc-start.c:392 [0x29e3f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:_start [0xab24]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+========= 
+========= Invalid __global__ read of size 8 bytes
+=========     at add(double *, const double *, const double *)+0x78 in /home/chris/workspace/cuda_cpp_study/add1.cu:90
+=========     by thread (46,0,0) in block (8,0,0)
+=========     Address 0x7fe064e02170 is out of bounds
+=========     and is 144 bytes before the nearest allocation at 0x7fe064e02200 of size 8,200 bytes
+=========     Saved host backtrace up to driver entry point at kernel launch time
+=========     Host Frame:cuLaunchKernel [0x39fb94]
+=========                in /lib/x86_64-linux-gnu/libcuda.so.1
+=========     Host Frame:libcudart_static_4d8b33a106dceb3c07a56e26de61f2d53bb62a68 [0x110cd]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaLaunchKernel [0x7480d]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaError cudaLaunchKernel<char>(char const*, dim3, dim3, void**, unsigned long, CUstream_st*) [0xb7f5]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__device_stub__Z3addPdPKdS1_(double*, double const*, double const*) [0xb697]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:add(double*, double const*, double const*) [0xb6e0]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:main [0xb09a]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__libc_start_call_main in ../sysdeps/nptl/libc_start_call_main.h:58 [0x29d8f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:__libc_start_main in ../csu/libc-start.c:392 [0x29e3f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:_start [0xab24]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+========= 
+========= Invalid __global__ read of size 8 bytes
+=========     at add(double *, const double *, const double *)+0x78 in /home/chris/workspace/cuda_cpp_study/add1.cu:90
+=========     by thread (47,0,0) in block (8,0,0)
+=========     Address 0x7fe064e02178 is out of bounds
+=========     and is 136 bytes before the nearest allocation at 0x7fe064e02200 of size 8,200 bytes
+=========     Saved host backtrace up to driver entry point at kernel launch time
+=========     Host Frame:cuLaunchKernel [0x39fb94]
+=========                in /lib/x86_64-linux-gnu/libcuda.so.1
+=========     Host Frame:libcudart_static_4d8b33a106dceb3c07a56e26de61f2d53bb62a68 [0x110cd]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaLaunchKernel [0x7480d]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaError cudaLaunchKernel<char>(char const*, dim3, dim3, void**, unsigned long, CUstream_st*) [0xb7f5]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__device_stub__Z3addPdPKdS1_(double*, double const*, double const*) [0xb697]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:add(double*, double const*, double const*) [0xb6e0]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:main [0xb09a]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__libc_start_call_main in ../sysdeps/nptl/libc_start_call_main.h:58 [0x29d8f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:__libc_start_main in ../csu/libc-start.c:392 [0x29e3f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:_start [0xab24]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+========= 
+========= Invalid __global__ read of size 8 bytes
+=========     at add(double *, const double *, const double *)+0x78 in /home/chris/workspace/cuda_cpp_study/add1.cu:90
+=========     by thread (48,0,0) in block (8,0,0)
+=========     Address 0x7fe064e02180 is out of bounds
+=========     and is 128 bytes before the nearest allocation at 0x7fe064e02200 of size 8,200 bytes
+=========     Saved host backtrace up to driver entry point at kernel launch time
+=========     Host Frame:cuLaunchKernel [0x39fb94]
+=========                in /lib/x86_64-linux-gnu/libcuda.so.1
+=========     Host Frame:libcudart_static_4d8b33a106dceb3c07a56e26de61f2d53bb62a68 [0x110cd]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaLaunchKernel [0x7480d]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaError cudaLaunchKernel<char>(char const*, dim3, dim3, void**, unsigned long, CUstream_st*) [0xb7f5]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__device_stub__Z3addPdPKdS1_(double*, double const*, double const*) [0xb697]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:add(double*, double const*, double const*) [0xb6e0]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:main [0xb09a]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__libc_start_call_main in ../sysdeps/nptl/libc_start_call_main.h:58 [0x29d8f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:__libc_start_main in ../csu/libc-start.c:392 [0x29e3f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:_start [0xab24]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+========= 
+========= Invalid __global__ read of size 8 bytes
+=========     at add(double *, const double *, const double *)+0x78 in /home/chris/workspace/cuda_cpp_study/add1.cu:90
+=========     by thread (49,0,0) in block (8,0,0)
+=========     Address 0x7fe064e02188 is out of bounds
+=========     and is 120 bytes before the nearest allocation at 0x7fe064e02200 of size 8,200 bytes
+=========     Saved host backtrace up to driver entry point at kernel launch time
+=========     Host Frame:cuLaunchKernel [0x39fb94]
+=========                in /lib/x86_64-linux-gnu/libcuda.so.1
+=========     Host Frame:libcudart_static_4d8b33a106dceb3c07a56e26de61f2d53bb62a68 [0x110cd]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaLaunchKernel [0x7480d]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaError cudaLaunchKernel<char>(char const*, dim3, dim3, void**, unsigned long, CUstream_st*) [0xb7f5]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__device_stub__Z3addPdPKdS1_(double*, double const*, double const*) [0xb697]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:add(double*, double const*, double const*) [0xb6e0]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:main [0xb09a]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__libc_start_call_main in ../sysdeps/nptl/libc_start_call_main.h:58 [0x29d8f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:__libc_start_main in ../csu/libc-start.c:392 [0x29e3f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:_start [0xab24]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+========= 
+========= Invalid __global__ read of size 8 bytes
+=========     at add(double *, const double *, const double *)+0x78 in /home/chris/workspace/cuda_cpp_study/add1.cu:90
+=========     by thread (50,0,0) in block (8,0,0)
+=========     Address 0x7fe064e02190 is out of bounds
+=========     and is 112 bytes before the nearest allocation at 0x7fe064e02200 of size 8,200 bytes
+=========     Saved host backtrace up to driver entry point at kernel launch time
+=========     Host Frame:cuLaunchKernel [0x39fb94]
+=========                in /lib/x86_64-linux-gnu/libcuda.so.1
+=========     Host Frame:libcudart_static_4d8b33a106dceb3c07a56e26de61f2d53bb62a68 [0x110cd]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaLaunchKernel [0x7480d]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaError cudaLaunchKernel<char>(char const*, dim3, dim3, void**, unsigned long, CUstream_st*) [0xb7f5]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__device_stub__Z3addPdPKdS1_(double*, double const*, double const*) [0xb697]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:add(double*, double const*, double const*) [0xb6e0]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:main [0xb09a]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__libc_start_call_main in ../sysdeps/nptl/libc_start_call_main.h:58 [0x29d8f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:__libc_start_main in ../csu/libc-start.c:392 [0x29e3f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:_start [0xab24]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+========= 
+========= Invalid __global__ read of size 8 bytes
+=========     at add(double *, const double *, const double *)+0x78 in /home/chris/workspace/cuda_cpp_study/add1.cu:90
+=========     by thread (51,0,0) in block (8,0,0)
+=========     Address 0x7fe064e02198 is out of bounds
+=========     and is 104 bytes before the nearest allocation at 0x7fe064e02200 of size 8,200 bytes
+=========     Saved host backtrace up to driver entry point at kernel launch time
+=========     Host Frame:cuLaunchKernel [0x39fb94]
+=========                in /lib/x86_64-linux-gnu/libcuda.so.1
+=========     Host Frame:libcudart_static_4d8b33a106dceb3c07a56e26de61f2d53bb62a68 [0x110cd]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaLaunchKernel [0x7480d]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaError cudaLaunchKernel<char>(char const*, dim3, dim3, void**, unsigned long, CUstream_st*) [0xb7f5]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__device_stub__Z3addPdPKdS1_(double*, double const*, double const*) [0xb697]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:add(double*, double const*, double const*) [0xb6e0]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:main [0xb09a]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__libc_start_call_main in ../sysdeps/nptl/libc_start_call_main.h:58 [0x29d8f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:__libc_start_main in ../csu/libc-start.c:392 [0x29e3f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:_start [0xab24]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+========= 
+========= Invalid __global__ read of size 8 bytes
+=========     at add(double *, const double *, const double *)+0x78 in /home/chris/workspace/cuda_cpp_study/add1.cu:90
+=========     by thread (52,0,0) in block (8,0,0)
+=========     Address 0x7fe064e021a0 is out of bounds
+=========     and is 96 bytes before the nearest allocation at 0x7fe064e02200 of size 8,200 bytes
+=========     Saved host backtrace up to driver entry point at kernel launch time
+=========     Host Frame:cuLaunchKernel [0x39fb94]
+=========                in /lib/x86_64-linux-gnu/libcuda.so.1
+=========     Host Frame:libcudart_static_4d8b33a106dceb3c07a56e26de61f2d53bb62a68 [0x110cd]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaLaunchKernel [0x7480d]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaError cudaLaunchKernel<char>(char const*, dim3, dim3, void**, unsigned long, CUstream_st*) [0xb7f5]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__device_stub__Z3addPdPKdS1_(double*, double const*, double const*) [0xb697]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:add(double*, double const*, double const*) [0xb6e0]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:main [0xb09a]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__libc_start_call_main in ../sysdeps/nptl/libc_start_call_main.h:58 [0x29d8f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:__libc_start_main in ../csu/libc-start.c:392 [0x29e3f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:_start [0xab24]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+========= 
+========= Invalid __global__ read of size 8 bytes
+=========     at add(double *, const double *, const double *)+0x78 in /home/chris/workspace/cuda_cpp_study/add1.cu:90
+=========     by thread (53,0,0) in block (8,0,0)
+=========     Address 0x7fe064e021a8 is out of bounds
+=========     and is 88 bytes before the nearest allocation at 0x7fe064e02200 of size 8,200 bytes
+=========     Saved host backtrace up to driver entry point at kernel launch time
+=========     Host Frame:cuLaunchKernel [0x39fb94]
+=========                in /lib/x86_64-linux-gnu/libcuda.so.1
+=========     Host Frame:libcudart_static_4d8b33a106dceb3c07a56e26de61f2d53bb62a68 [0x110cd]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaLaunchKernel [0x7480d]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaError cudaLaunchKernel<char>(char const*, dim3, dim3, void**, unsigned long, CUstream_st*) [0xb7f5]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__device_stub__Z3addPdPKdS1_(double*, double const*, double const*) [0xb697]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:add(double*, double const*, double const*) [0xb6e0]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:main [0xb09a]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__libc_start_call_main in ../sysdeps/nptl/libc_start_call_main.h:58 [0x29d8f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:__libc_start_main in ../csu/libc-start.c:392 [0x29e3f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:_start [0xab24]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+========= 
+========= Invalid __global__ read of size 8 bytes
+=========     at add(double *, const double *, const double *)+0x78 in /home/chris/workspace/cuda_cpp_study/add1.cu:90
+=========     by thread (54,0,0) in block (8,0,0)
+=========     Address 0x7fe064e021b0 is out of bounds
+=========     and is 80 bytes before the nearest allocation at 0x7fe064e02200 of size 8,200 bytes
+=========     Saved host backtrace up to driver entry point at kernel launch time
+=========     Host Frame:cuLaunchKernel [0x39fb94]
+=========                in /lib/x86_64-linux-gnu/libcuda.so.1
+=========     Host Frame:libcudart_static_4d8b33a106dceb3c07a56e26de61f2d53bb62a68 [0x110cd]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaLaunchKernel [0x7480d]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaError cudaLaunchKernel<char>(char const*, dim3, dim3, void**, unsigned long, CUstream_st*) [0xb7f5]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__device_stub__Z3addPdPKdS1_(double*, double const*, double const*) [0xb697]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:add(double*, double const*, double const*) [0xb6e0]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:main [0xb09a]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__libc_start_call_main in ../sysdeps/nptl/libc_start_call_main.h:58 [0x29d8f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:__libc_start_main in ../csu/libc-start.c:392 [0x29e3f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:_start [0xab24]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+========= 
+========= Invalid __global__ read of size 8 bytes
+=========     at add(double *, const double *, const double *)+0x78 in /home/chris/workspace/cuda_cpp_study/add1.cu:90
+=========     by thread (55,0,0) in block (8,0,0)
+=========     Address 0x7fe064e021b8 is out of bounds
+=========     and is 72 bytes before the nearest allocation at 0x7fe064e02200 of size 8,200 bytes
+=========     Saved host backtrace up to driver entry point at kernel launch time
+=========     Host Frame:cuLaunchKernel [0x39fb94]
+=========                in /lib/x86_64-linux-gnu/libcuda.so.1
+=========     Host Frame:libcudart_static_4d8b33a106dceb3c07a56e26de61f2d53bb62a68 [0x110cd]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaLaunchKernel [0x7480d]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaError cudaLaunchKernel<char>(char const*, dim3, dim3, void**, unsigned long, CUstream_st*) [0xb7f5]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__device_stub__Z3addPdPKdS1_(double*, double const*, double const*) [0xb697]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:add(double*, double const*, double const*) [0xb6e0]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:main [0xb09a]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__libc_start_call_main in ../sysdeps/nptl/libc_start_call_main.h:58 [0x29d8f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:__libc_start_main in ../csu/libc-start.c:392 [0x29e3f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:_start [0xab24]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+========= 
+========= Invalid __global__ read of size 8 bytes
+=========     at add(double *, const double *, const double *)+0x78 in /home/chris/workspace/cuda_cpp_study/add1.cu:90
+=========     by thread (56,0,0) in block (8,0,0)
+=========     Address 0x7fe064e021c0 is out of bounds
+=========     and is 64 bytes before the nearest allocation at 0x7fe064e02200 of size 8,200 bytes
+=========     Saved host backtrace up to driver entry point at kernel launch time
+=========     Host Frame:cuLaunchKernel [0x39fb94]
+=========                in /lib/x86_64-linux-gnu/libcuda.so.1
+=========     Host Frame:libcudart_static_4d8b33a106dceb3c07a56e26de61f2d53bb62a68 [0x110cd]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaLaunchKernel [0x7480d]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaError cudaLaunchKernel<char>(char const*, dim3, dim3, void**, unsigned long, CUstream_st*) [0xb7f5]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__device_stub__Z3addPdPKdS1_(double*, double const*, double const*) [0xb697]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:add(double*, double const*, double const*) [0xb6e0]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:main [0xb09a]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__libc_start_call_main in ../sysdeps/nptl/libc_start_call_main.h:58 [0x29d8f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:__libc_start_main in ../csu/libc-start.c:392 [0x29e3f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:_start [0xab24]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+========= 
+========= Invalid __global__ read of size 8 bytes
+=========     at add(double *, const double *, const double *)+0x78 in /home/chris/workspace/cuda_cpp_study/add1.cu:90
+=========     by thread (57,0,0) in block (8,0,0)
+=========     Address 0x7fe064e021c8 is out of bounds
+=========     and is 56 bytes before the nearest allocation at 0x7fe064e02200 of size 8,200 bytes
+=========     Saved host backtrace up to driver entry point at kernel launch time
+=========     Host Frame:cuLaunchKernel [0x39fb94]
+=========                in /lib/x86_64-linux-gnu/libcuda.so.1
+=========     Host Frame:libcudart_static_4d8b33a106dceb3c07a56e26de61f2d53bb62a68 [0x110cd]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaLaunchKernel [0x7480d]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaError cudaLaunchKernel<char>(char const*, dim3, dim3, void**, unsigned long, CUstream_st*) [0xb7f5]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__device_stub__Z3addPdPKdS1_(double*, double const*, double const*) [0xb697]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:add(double*, double const*, double const*) [0xb6e0]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:main [0xb09a]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__libc_start_call_main in ../sysdeps/nptl/libc_start_call_main.h:58 [0x29d8f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:__libc_start_main in ../csu/libc-start.c:392 [0x29e3f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:_start [0xab24]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+========= 
+========= Invalid __global__ read of size 8 bytes
+=========     at add(double *, const double *, const double *)+0x78 in /home/chris/workspace/cuda_cpp_study/add1.cu:90
+=========     by thread (58,0,0) in block (8,0,0)
+=========     Address 0x7fe064e021d0 is out of bounds
+=========     and is 48 bytes before the nearest allocation at 0x7fe064e02200 of size 8,200 bytes
+=========     Saved host backtrace up to driver entry point at kernel launch time
+=========     Host Frame:cuLaunchKernel [0x39fb94]
+=========                in /lib/x86_64-linux-gnu/libcuda.so.1
+=========     Host Frame:libcudart_static_4d8b33a106dceb3c07a56e26de61f2d53bb62a68 [0x110cd]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaLaunchKernel [0x7480d]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaError cudaLaunchKernel<char>(char const*, dim3, dim3, void**, unsigned long, CUstream_st*) [0xb7f5]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__device_stub__Z3addPdPKdS1_(double*, double const*, double const*) [0xb697]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:add(double*, double const*, double const*) [0xb6e0]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:main [0xb09a]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__libc_start_call_main in ../sysdeps/nptl/libc_start_call_main.h:58 [0x29d8f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:__libc_start_main in ../csu/libc-start.c:392 [0x29e3f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:_start [0xab24]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+========= 
+========= Invalid __global__ read of size 8 bytes
+=========     at add(double *, const double *, const double *)+0x78 in /home/chris/workspace/cuda_cpp_study/add1.cu:90
+=========     by thread (59,0,0) in block (8,0,0)
+=========     Address 0x7fe064e021d8 is out of bounds
+=========     and is 40 bytes before the nearest allocation at 0x7fe064e02200 of size 8,200 bytes
+=========     Saved host backtrace up to driver entry point at kernel launch time
+=========     Host Frame:cuLaunchKernel [0x39fb94]
+=========                in /lib/x86_64-linux-gnu/libcuda.so.1
+=========     Host Frame:libcudart_static_4d8b33a106dceb3c07a56e26de61f2d53bb62a68 [0x110cd]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaLaunchKernel [0x7480d]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaError cudaLaunchKernel<char>(char const*, dim3, dim3, void**, unsigned long, CUstream_st*) [0xb7f5]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__device_stub__Z3addPdPKdS1_(double*, double const*, double const*) [0xb697]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:add(double*, double const*, double const*) [0xb6e0]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:main [0xb09a]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__libc_start_call_main in ../sysdeps/nptl/libc_start_call_main.h:58 [0x29d8f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:__libc_start_main in ../csu/libc-start.c:392 [0x29e3f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:_start [0xab24]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+========= 
+========= Invalid __global__ read of size 8 bytes
+=========     at add(double *, const double *, const double *)+0x78 in /home/chris/workspace/cuda_cpp_study/add1.cu:90
+=========     by thread (60,0,0) in block (8,0,0)
+=========     Address 0x7fe064e021e0 is out of bounds
+=========     and is 32 bytes before the nearest allocation at 0x7fe064e02200 of size 8,200 bytes
+=========     Saved host backtrace up to driver entry point at kernel launch time
+=========     Host Frame:cuLaunchKernel [0x39fb94]
+=========                in /lib/x86_64-linux-gnu/libcuda.so.1
+=========     Host Frame:libcudart_static_4d8b33a106dceb3c07a56e26de61f2d53bb62a68 [0x110cd]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaLaunchKernel [0x7480d]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaError cudaLaunchKernel<char>(char const*, dim3, dim3, void**, unsigned long, CUstream_st*) [0xb7f5]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__device_stub__Z3addPdPKdS1_(double*, double const*, double const*) [0xb697]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:add(double*, double const*, double const*) [0xb6e0]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:main [0xb09a]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__libc_start_call_main in ../sysdeps/nptl/libc_start_call_main.h:58 [0x29d8f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:__libc_start_main in ../csu/libc-start.c:392 [0x29e3f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:_start [0xab24]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+========= 
+========= Invalid __global__ read of size 8 bytes
+=========     at add(double *, const double *, const double *)+0x78 in /home/chris/workspace/cuda_cpp_study/add1.cu:90
+=========     by thread (61,0,0) in block (8,0,0)
+=========     Address 0x7fe064e021e8 is out of bounds
+=========     and is 24 bytes before the nearest allocation at 0x7fe064e02200 of size 8,200 bytes
+=========     Saved host backtrace up to driver entry point at kernel launch time
+=========     Host Frame:cuLaunchKernel [0x39fb94]
+=========                in /lib/x86_64-linux-gnu/libcuda.so.1
+=========     Host Frame:libcudart_static_4d8b33a106dceb3c07a56e26de61f2d53bb62a68 [0x110cd]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaLaunchKernel [0x7480d]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaError cudaLaunchKernel<char>(char const*, dim3, dim3, void**, unsigned long, CUstream_st*) [0xb7f5]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__device_stub__Z3addPdPKdS1_(double*, double const*, double const*) [0xb697]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:add(double*, double const*, double const*) [0xb6e0]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:main [0xb09a]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__libc_start_call_main in ../sysdeps/nptl/libc_start_call_main.h:58 [0x29d8f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:__libc_start_main in ../csu/libc-start.c:392 [0x29e3f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:_start [0xab24]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+========= 
+========= Invalid __global__ read of size 8 bytes
+=========     at add(double *, const double *, const double *)+0x78 in /home/chris/workspace/cuda_cpp_study/add1.cu:90
+=========     by thread (62,0,0) in block (8,0,0)
+=========     Address 0x7fe064e021f0 is out of bounds
+=========     and is 16 bytes before the nearest allocation at 0x7fe064e02200 of size 8,200 bytes
+=========     Saved host backtrace up to driver entry point at kernel launch time
+=========     Host Frame:cuLaunchKernel [0x39fb94]
+=========                in /lib/x86_64-linux-gnu/libcuda.so.1
+=========     Host Frame:libcudart_static_4d8b33a106dceb3c07a56e26de61f2d53bb62a68 [0x110cd]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaLaunchKernel [0x7480d]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaError cudaLaunchKernel<char>(char const*, dim3, dim3, void**, unsigned long, CUstream_st*) [0xb7f5]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__device_stub__Z3addPdPKdS1_(double*, double const*, double const*) [0xb697]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:add(double*, double const*, double const*) [0xb6e0]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:main [0xb09a]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__libc_start_call_main in ../sysdeps/nptl/libc_start_call_main.h:58 [0x29d8f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:__libc_start_main in ../csu/libc-start.c:392 [0x29e3f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:_start [0xab24]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+========= 
+========= Invalid __global__ read of size 8 bytes
+=========     at add(double *, const double *, const double *)+0x78 in /home/chris/workspace/cuda_cpp_study/add1.cu:90
+=========     by thread (63,0,0) in block (8,0,0)
+=========     Address 0x7fe064e021f8 is out of bounds
+=========     and is 8 bytes before the nearest allocation at 0x7fe064e02200 of size 8,200 bytes
+=========     Saved host backtrace up to driver entry point at kernel launch time
+=========     Host Frame:cuLaunchKernel [0x39fb94]
+=========                in /lib/x86_64-linux-gnu/libcuda.so.1
+=========     Host Frame:libcudart_static_4d8b33a106dceb3c07a56e26de61f2d53bb62a68 [0x110cd]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaLaunchKernel [0x7480d]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:cudaError cudaLaunchKernel<char>(char const*, dim3, dim3, void**, unsigned long, CUstream_st*) [0xb7f5]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__device_stub__Z3addPdPKdS1_(double*, double const*, double const*) [0xb697]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:add(double*, double const*, double const*) [0xb6e0]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:main [0xb09a]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__libc_start_call_main in ../sysdeps/nptl/libc_start_call_main.h:58 [0x29d8f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:__libc_start_main in ../csu/libc-start.c:392 [0x29e3f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:_start [0xab24]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+========= 
+========= Program hit cudaErrorLaunchFailure (error 719) due to "unspecified launch failure" on CUDA API call to cudaMemcpy.
+=========     Saved host backtrace up to driver entry point at error
+=========     Host Frame: [0x4cb045]
+=========                in /lib/x86_64-linux-gnu/libcuda.so.1
+=========     Host Frame:cudaMemcpy [0x6f609]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:main [0xb0b4]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+=========     Host Frame:__libc_start_call_main in ../sysdeps/nptl/libc_start_call_main.h:58 [0x29d8f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:__libc_start_main in ../csu/libc-start.c:392 [0x29e3f]
+=========                in /lib/x86_64-linux-gnu/libc.so.6
+=========     Host Frame:_start [0xab24]
+=========                in /home/chris/workspace/cuda_cpp_study/./add1.exe
+========= 
+test kernel function add
+CUDA Error:
+File: add1.cu
+LINE: 44
+Error Code: 719
+Error Text: unspecified launch failure
+========= Target application returned an error
+========= ERROR SUMMARY: 64 errors

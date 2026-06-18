@@ -9,7 +9,7 @@ constexpr double EPSILON = 1.0e-15;
 constexpr double a = 1.23;
 constexpr double b = 2.34;
 constexpr double z = 3.57;
-constexpr int N = 1024;
+constexpr int N = 1025;
 void __global__ add(double *dst, const double *x, const double *y);
 void __device__ add_device(const double *x, const double *y);
 void check(std::array<double, N> &data);
@@ -35,7 +35,7 @@ int main(void) {
     CHECK(cudaMemcpy(d_y, h_b, M, cudaMemcpyHostToDevice));
 
     constexpr int block_size = 128;
-    constexpr int grid_size = N / 128;
+    constexpr int grid_size = (N + block_size - 1)/ 128;
 
     add<<<grid_size, block_size>>>(d_z, d_x, d_y);
 
@@ -83,9 +83,11 @@ double __device__ add_device(const double x, const double y) {
 void __global__ add(double *dst, const double *x, const double *y) {
     const int tid = threadIdx.x + blockIdx.x * blockDim.x;
 
-    if (tid < N) {
+    // 取消该if语句，使用computer-sanitizer 检测cubin目标文件，就可以详细看到出错的地方。
+    // 如：Address 0x7e2ccae02008 is out of bounds，表示越界访问显存了！！！
+    // if (tid < N) { 
         // dst[tid] = x[tid] + y[tid];
         dst[tid] = add_device(x[tid], y[tid]);
-        printf("thread id %d: %lf   thread-id:%d, block-id:%d\n", tid, dst[tid], threadIdx.x, blockIdx.x);
-    }
+        // printf("thread id %d: %lf   thread-id:%d, block-id:%d\n", tid, dst[tid], threadIdx.x, blockIdx.x);
+    // }
 }
