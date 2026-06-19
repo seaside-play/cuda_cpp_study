@@ -8,7 +8,7 @@
 constexpr double a = 1.23;
 constexpr double b = 2.34;
 constexpr double z = 3.57;
-constexpr int N = 1025;
+constexpr int N = 1e7;
 void __global__ add(double *dst, const double *x, const double *y);
 void __device__ add_device(const double *x, const double *y);
 void check(std::array<double, N> &data);
@@ -35,8 +35,12 @@ int main(void) {
 
     constexpr int block_size = 128;
     constexpr int grid_size = (N + block_size - 1)/ 128;
-
-    add<<<grid_size, block_size>>>(d_z, d_x, d_y);
+    
+    {
+        EventTimer event_timer;   
+        add<<<grid_size, block_size>>>(d_z, d_x, d_y);
+    }
+    
 
     // cudaMemcpy(h_z.data(), d_z, M, cudaMemcpyDeviceToHost);
     // CHECK(cudaMemcpy(h_z, d_z, M, cudaMemcpyHostToDevice)); // 方向错误了，不提示，不在执行check函数，使用宏函数检测出问题原因
