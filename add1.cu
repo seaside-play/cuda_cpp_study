@@ -3,9 +3,8 @@
 #include <array>
 #include <cstdio>
 #include <iterator>
-#include "error.cuh"
+#include "base.cuh"
 
-constexpr double EPSILON = 1.0e-15;
 constexpr double a = 1.23;
 constexpr double b = 2.34;
 constexpr double z = 3.57;
