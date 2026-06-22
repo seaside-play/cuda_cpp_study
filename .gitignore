@@ -1,2 +1,6 @@
 *.exe
 tmp/
+main
+build/
+*.nsys-rep
+*.sqlite

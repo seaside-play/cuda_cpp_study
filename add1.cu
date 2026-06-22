@@ -5,28 +5,28 @@
 #include <iterator>
 #include "base.cuh"
 
-constexpr double a = 1.23;
-constexpr double b = 2.34;
-constexpr double z = 3.57;
+constexpr real a = 1.23;
+constexpr real b = 2.34;
+constexpr real z = 3.57;
 constexpr int N = 1e7;
-void __global__ add(double *dst, const double *x, const double *y);
-void __device__ add_device(const double *x, const double *y);
-void check(std::array<double, N> &data);
-void check(const double *data, int len);
+void __global__ add(real *dst, const real *x, const real *y);
+void __device__ add_device(const real *x, const real *y);
+void check(std::array<real, N> &data);
+void check(const real *data, int len);
 
 int main(void) {
     printf("test kernel function add\n");
-    // std::array<double, N> h_a {}; // 使用std::array，数据存放在stack中，
-    // std::array<double, N> h_b {}; // 若用new，则存放在堆中；若是数据量大，使用new。
-    // std::array<double, N> h_z {};
-    double *h_a = new double[N];
-    double *h_b = new double[N];
-    double *h_z = new double[N];
+    // std::array<real, N> h_a {}; // 使用std::array，数据存放在stack中，
+    // std::array<real, N> h_b {}; // 若用new，则存放在堆中；若是数据量大，使用new。
+    // std::array<real, N> h_z {};
+    real *h_a = new real[N];
+    real *h_b = new real[N];
+    real *h_z = new real[N];
     std::fill(h_a, h_a + N, a);
     std::fill(h_b, h_b + N, b);
     
-    double *d_x, *d_y, *d_z;
-    constexpr int M = sizeof(double) * N;
+    real *d_x, *d_y, *d_z;
+    constexpr int M = sizeof(real) * N;
     CHECK(cudaMalloc((void**)&d_x, M));
     CHECK(cudaMalloc((void**)&d_y, M));
     CHECK(cudaMalloc((void**)&d_z, M));
@@ -58,7 +58,7 @@ int main(void) {
     return 0;
 }
 
-void check(std::array<double, N> &data) {
+void check(std::array<real, N> &data) {
     bool has_error = false;
     for (auto& item : data) {
         if (fabs(item-z)>EPSILON) {
@@ -68,7 +68,7 @@ void check(std::array<double, N> &data) {
     has_error ? printf("Has error\n") : printf("No error\n");
 }
 
-void check(const double *data, int len) {
+void check(const real *data, int len) {
     bool has_error = false;
     for (int i = 0; i < len; ++i) {
         if (fabs(data[i]-z) > EPSILON) {
@@ -79,11 +79,11 @@ void check(const double *data, int len) {
 }
 
 // 为数据相加定义一个设备函数，仅仅是练手
-double __device__ add_device(const double x, const double y) {
+real __device__ add_device(const real x, const real y) {
     return x + y;
 }
 
-void __global__ add(double *dst, const double *x, const double *y) {
+void __global__ add(real *dst, const real *x, const real *y) {
     const int tid = threadIdx.x + blockIdx.x * blockDim.x;
 
     // 取消该if语句，使用computer-sanitizer 检测cubin目标文件，就可以详细看到出错的地方。
