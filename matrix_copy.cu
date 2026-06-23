@@ -36,7 +36,7 @@ bool MatrixCopy::CopyInDevice(real *B, real *A) {
 
   CHECK(cudaMemcpy(B, d_B, total_bytes_, cudaMemcpyDeviceToHost));
 
-  //test::PrintMatrixData(B, mat_dim_2d_, "矩阵B的内容 by device");
+  test::PrintMatrixData(B, mat_dim_2d_, "矩阵B的内容 by device");
 
   CHECK(cudaFree(d_A));
   CHECK(cudaFree(d_B));
@@ -54,7 +54,7 @@ bool MatrixCopy::CopyInHost(real *B, real *A) {
     }
   }
   
-  //PrintMatrixData(B, mat_dim_2d_, "矩阵B的内容 by host");
+  PrintMatrixData(B, mat_dim_2d_, "矩阵B的内容 by host");
 
   return true;
 }

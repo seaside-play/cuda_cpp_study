@@ -2,11 +2,6 @@
 #include "include/matrix_copy.cuh"
 #include <algorithm>
 
-__global__ void copy(real *B, const real *A, const int n);
-
-void print_matrix(const real *matrix, const int n);
-
-
 int main(int argc, char* argv[]) {
     if (argc != 3) {
         printf("usage: %s Rows and Cols\n", argv[0]);
