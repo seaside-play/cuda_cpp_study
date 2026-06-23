@@ -2,7 +2,7 @@
 
 namespace test {
 
-__global__ void matrix_copy(real *B, const real *A, const MatDim2D &mat_dim_2d) {
+__global__ void matrix_copy(real *B, const real *A, const MatDim2D mat_dim_2d) {
     // printf("enter matrix_copy\n");
     const int x = blockDim.x * blockIdx.x + threadIdx.x; // 先确定在哪个block块的x坐标上的位置，再确定在block块中的哪个x位置的线程
     const int y = blockDim.y * blockIdx.y + threadIdx.y; // 然后确定在哪个block块的y坐标上的位置，再确定在block块中的哪个y位置的线程
