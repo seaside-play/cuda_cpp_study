@@ -29,7 +29,11 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 # set(SRC_CPP
 # )
 set(SRC_CU
-    add1.cu
+    main.cu
+    utils.cu
+    kernels.cu
+    matrix_copy.cu
+ 
     # test_cublas.cu
 )
 
