@@ -8,8 +8,9 @@ class MatrixCopy {
 public:
     MatrixCopy(int matrix_dim);
     MatrixCopy(int matrix_dim_row, int matrix_dim_col);
-    bool CopyInDevice(real *B, real *A);
+    bool TranslateInDevice(real *B, real *A, TranslateType translate_type);
     bool CopyInHost(real *B, real *A);
+    
 
 private:
     MatDim2D mat_dim_2d_;

@@ -60,7 +60,7 @@ add_executable(main ${SRC_CU})
 target_include_directories(main PRIVATE ${CMAKE_SOURCE_DIR}/include)
 
 # 3. 调用函数，传入目标名 add1
-set_cuda_debug_options(main)
+# set_cuda_debug_options(main)
 
 # 去掉 CUDAToolkit::cublas
 target_link_libraries(main PRIVATE
