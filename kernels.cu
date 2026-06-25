@@ -42,19 +42,22 @@ __global__ void matrix_transpose1_by_shared_memory(real *B, const real *A, const
     int x = bx + threadIdx.x;
     int y = by + threadIdx.y;
     if (x < mat_dim_2d.cols && y < mat_dim_2d.rows) {
-        s_data[threadIdx.y][threadIdx.x] = A[y*mat_dim_2d.cols+x]; // 用心体会这里的书写方式
+        s_data[threadIdx.y][threadIdx.x] = A[y*mat_dim_2d.cols+x]; // 用心体会这里的书写方式，初始化的时候
+        // printf("threadIdx.y:threadIdx.x(%d:%d)\n", threadIdx.y, threadIdx.x);
     }
+    // printf("----");
     __syncthreads(); // 数据初始化时，需要实现线程块内所有线程束的同步功能
     int x1 = y; // 转置时，对原始的x和y进行对调, 即便进行了对调，
     int y1 = x; 
     // B的维度与A的维度，刚好相反
     // MatDim2D mat_transpose{mat_dim_2d.cols, mat_dim_2d.rows};
     // 这里仍然保持的原始A的二维数组的规则，但是偏移值却不在是cols，而是rows
-    if (x1 < mat_dim_2d.cols && y1 < mat_dim_2d.rows) { // 即便进行了（x,y）对调，但二维数组的范围值，仍然没有变化；
+    if (x1 < mat_dim_2d.cols && y1 < mat_dim_2d.rows/*这里的范围限制了threadIdx.x和threadIdx.y的范围，妙*/) { // 即便进行了（x,y）对调，但二维数组的范围值，仍然没有变化；
         // 如何理解：B[x1 * mat_dim_2d.rows + y1] 我们注意到这个的y1，就是x，是连续的数据，那么这样就保证了B是连续的，
         // 但是不再以cols为单位进行偏移，而是以rows进行偏移，仅仅rows个数据进行邻接赋值。
         // 如何理解：s_data[threadIdx.x][threadIdx.y]，首先s_data的结构没有变化，就是普通的(x,y)啊
         B[x1 * mat_dim_2d.rows + y1] = s_data[threadIdx.x][threadIdx.y]; // 共享内存已是缓存了，不用考虑合并，要考虑B的合并访问
+        // 这里print之后，threadIdx.x[0,4), threadIdx.y[0,7]这就是并行编程的魅力所在
         // printf("x1:y1(%d:%d) threadIdx.x:threadIdx.y(%d:%d)\n", x1,y1, threadIdx.x, threadIdx.y);
                                                                          
     }
