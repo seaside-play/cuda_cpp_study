@@ -11,7 +11,7 @@ struct MatDim2D {
 
 const int TILE_DIM {32};
 
-enum class TranslateType { COPY, TRANSPOSE1, TRANSPOSE2, TRANSPOSE3 };
+enum class TranslateType { COPY, TRANSPOSE1, TRASNSPOSE1_SHARED, TRANSPOSE2, TRANSPOSE3 };
 
 }
 

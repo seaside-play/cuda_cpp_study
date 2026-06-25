@@ -1,3 +1,5 @@
+樊哲勇老师的git仓库地址：https://github.com/brucefan1983/CUDA-Programming
+
 nvcc -arch=sm_61 -o add1.exe add1.cu
 nvcc -o add1.exe add1.cu
 

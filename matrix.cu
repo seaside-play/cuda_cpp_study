@@ -1,4 +1,4 @@
-#include "include/matrix_copy.cuh"
+#include "include/matrix.cuh"
 
 namespace {
   constexpr size_t kTileDim {32};
@@ -6,14 +6,14 @@ namespace {
 
 namespace test {
 
-MatrixCopy::MatrixCopy(int matrix_dim) : MatrixCopy(matrix_dim, matrix_dim) {}
+Matrix::Matrix(int matrix_dim) : Matrix(matrix_dim, matrix_dim) {}
 
-MatrixCopy::MatrixCopy(int matrix_dim_row, int matrix_dim_col)
+Matrix::Matrix(int matrix_dim_row, int matrix_dim_col)
     : mat_dim_2d_(matrix_dim_row, matrix_dim_col),
       array_length_(matrix_dim_row * matrix_dim_col),
       total_bytes_(array_length_ * sizeof(real)) {}
 
-bool MatrixCopy::TranslateInDevice(real *B, real *A, TranslateType translate_type) {
+bool Matrix::TranslateInDevice(real *B, real *A, TranslateType translate_type) {
   // test::PrintMatrixData(A, mat_dim_2d_, "矩阵A的内容");
   real *d_A, *d_B;
   CHECK(cudaMalloc(&d_A, total_bytes_));
@@ -44,6 +44,10 @@ bool MatrixCopy::TranslateInDevice(real *B, real *A, TranslateType translate_typ
         test::matrix_transpose3<<<grid_size, block_size>>>(d_B, d_A, mat_dim_2d_);
         break;
       }
+      case TranslateType::TRASNSPOSE1_SHARED: {
+        test::matrix_transpose1_by_shared_memory<<<grid_size, block_size>>>(d_B, d_A, mat_dim_2d_);
+        break;
+      }
       default:{
         break;
       }
@@ -61,6 +65,7 @@ bool MatrixCopy::TranslateInDevice(real *B, real *A, TranslateType translate_typ
       break;
     }
     case TranslateType::TRANSPOSE1:
+    case TranslateType::TRASNSPOSE1_SHARED:
     case TranslateType::TRANSPOSE2: {
       MatDim2D mat_dim_2d_transporse(mat_dim_2d_.cols, mat_dim_2d_.rows);
       test::PrintMatrixData(B, mat_dim_2d_transporse, "转置矩阵内容 by device");
@@ -74,7 +79,7 @@ bool MatrixCopy::TranslateInDevice(real *B, real *A, TranslateType translate_typ
   return true;
 }
 
-bool MatrixCopy::CopyInHost(real *B, real *A) {
+bool Matrix::CopyInHost(real *B, real *A) {
   {
     EventTimer event_timer;
     for (auto i = 0; i < mat_dim_2d_.rows; ++i) {

@@ -4,10 +4,10 @@
 #include "include/base.cuh"
 
 namespace test {
-class MatrixCopy {
+class Matrix {
 public:
-    MatrixCopy(int matrix_dim);
-    MatrixCopy(int matrix_dim_row, int matrix_dim_col);
+    Matrix(int matrix_dim);
+    Matrix(int matrix_dim_row, int matrix_dim_col);
     bool TranslateInDevice(real *B, real *A, TranslateType translate_type);
     bool CopyInHost(real *B, real *A);
     

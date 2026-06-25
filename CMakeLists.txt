@@ -35,7 +35,7 @@ set(SRC_CU
     main.cu
     utils.cu
     kernels.cu
-    matrix_copy.cu
+    matrix.cu
     reduce.cu
  
     # test_cublas.cu

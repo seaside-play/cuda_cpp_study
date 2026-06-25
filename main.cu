@@ -1,16 +1,16 @@
 #include "include/base.cuh"
-#include "include/matrix_copy.cuh"
+#include "include/matrix.cuh"
 #include "include/reduce.cuh"
 #include <algorithm>
 #include <iostream>
 
 
-void TestMatrixOperate(int argc, char* argv);
+void TestMatrixOperate(int argc, char* argv[]);
 void TestArrayReduce();
 
 int main(int argc, char* argv[]) {
-    // TestMatrixOperate(argc, argv);
-    TestArrayReduce();
+    TestMatrixOperate(argc, argv);
+    // TestArrayReduce();
     return 0;
 }
 
@@ -31,20 +31,21 @@ void TestMatrixOperate(int argc, char* argv[]) {
         C[i] = 0;
     }
 
-    test::MatrixCopy matrix_copy(rows, cols);
+    test::Matrix matrix(rows, cols);
     std::vector<test::TranslateType> translate_types {//test::TranslateType::COPY, 
                                                       test::TranslateType::TRANSPOSE1, 
+                                                      test::TranslateType::TRASNSPOSE1_SHARED, 
                                                     //   test::TranslateType::TRANSPOSE2, 
                                                     //   test::TranslateType::TRANSPOSE3
                                                     };
-    // std::for_each(translate_types.cbegin(), translate_types.cend(), [&matrix_copy, &B, &A](test::TranslateType item) {
-    //     matrix_copy.TranslateInDevice(B, A, item);
+    // std::for_each(translate_types.cbegin(), translate_types.cend(), [&matrix, &B, &A](test::TranslateType item) {
+    //     matrix.TranslateInDevice(B, A, item);
     // });
     for (auto item : translate_types) {
-        matrix_copy.TranslateInDevice(B, A, item);
+        matrix.TranslateInDevice(B, A, item);
     }
 
-    // matrix_copy.CopyInHost(C, A);
+    // matrix.CopyInHost(C, A);
 
     delete []A;
     delete []B;
