@@ -35,7 +35,9 @@ __global__ void matrix_transpose1(real *B, const real *A, const MatDim2D mat_dim
  *      const MatDim2D mat_dim_2d 指明2维矩阵的维度，行数和列数
 *********************************************************************** */
 __global__ void matrix_transpose1_by_shared_memory(real *B, const real *A, const MatDim2D mat_dim_2d) {
-    __shared__ real s_data[TILE_DIM][TILE_DIM]; // 因为是静态共享内存，只能用全局变量或const变量
+    // __shared__ real s_data[TILE_DIM][TILE_DIM]; // 因为是静态共享内存，只能用全局变量或const变量
+    __shared__ real s_data[TILE_DIM][TILE_DIM+1]; // 修改共享内存的数组大小，可消除或减轻共享内存的bank冲突，从0.174976ms变为0.169984ms
+                                                  // 不管是单精度还是双精度，+1之后，都变快。
     int bx = blockIdx.x * blockDim.x;
     int by = blockIdx.y * blockDim.y;
 
@@ -58,8 +60,7 @@ __global__ void matrix_transpose1_by_shared_memory(real *B, const real *A, const
         // 如何理解：s_data[threadIdx.x][threadIdx.y]，首先s_data的结构没有变化，就是普通的(x,y)啊
         B[x1 * mat_dim_2d.rows + y1] = s_data[threadIdx.x][threadIdx.y]; // 共享内存已是缓存了，不用考虑合并，要考虑B的合并访问
         // 这里print之后，threadIdx.x[0,4), threadIdx.y[0,7]这就是并行编程的魅力所在
-        // printf("x1:y1(%d:%d) threadIdx.x:threadIdx.y(%d:%d)\n", x1,y1, threadIdx.x, threadIdx.y);
-                                                                         
+        // printf("x1:y1(%d:%d) threadIdx.x:threadIdx.y(%d:%d)\n", x1,y1, threadIdx.x, threadIdx.y);                 
     }
 }
 

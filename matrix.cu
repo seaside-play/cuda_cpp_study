@@ -68,7 +68,7 @@ bool Matrix::TranslateInDevice(real *B, real *A, TranslateType translate_type) {
     case TranslateType::TRASNSPOSE1_SHARED:
     case TranslateType::TRANSPOSE2: {
       MatDim2D mat_dim_2d_transporse(mat_dim_2d_.cols, mat_dim_2d_.rows);
-      test::PrintMatrixData(B, mat_dim_2d_transporse, "转置矩阵内容 by device");
+      // test::PrintMatrixData(B, mat_dim_2d_transporse, "转置矩阵内容 by device");
       break;
     }
     default: {
