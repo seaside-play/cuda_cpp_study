@@ -9,8 +9,8 @@ void TestMatrixOperate(int argc, char* argv[]);
 void TestArrayReduce();
 
 int main(int argc, char* argv[]) {
-    TestMatrixOperate(argc, argv);
-    // TestArrayReduce();
+    // TestMatrixOperate(argc, argv);
+    TestArrayReduce();
     return 0;
 }
 
@@ -63,6 +63,10 @@ void TestArrayReduce() {
 
     auto ret = reduce.ReduceInCPU(data, kCount);
     std::cout << "Result is " << ret << " in cpu." << std::endl;
+
+    auto ret4 = reduce.ReduceInSharedMemoryWithAtomic(data, kCount);
+    std::cout << "Result is " << ret4 << " in gpu shared memory and use atomicAdd function." << std::endl;
+    
 
     // 使用gpu共享内存进行reduce处理，不会改变数据内存
     auto ret3 = reduce.ReduceInSharedMemory(data, kCount);

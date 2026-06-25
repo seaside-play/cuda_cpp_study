@@ -16,6 +16,7 @@ __global__ void matrix_transpose3(real *B, const real *A, const MatDim2D mat_dim
 // 归约数组
 __global__ void reduce_in_global_memory(real *d_x, const int len);
 __global__ void reduce_in_shared_memory(real *d_x, real *y, const int len);
+__global__ void reduce_in_shared_memory_with_atomic(real *d_x, real *y, const int len);
 
 } // namespace test
 #endif // KERNELS_H_

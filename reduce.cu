@@ -77,4 +77,29 @@ real Reduce::ReduceInSharedMemory(const real *x, const int len) {
     return sum;
 }
 
+real Reduce::ReduceInSharedMemoryWithAtomic(const real *x, const int len) {
+    FUNC();
+    real *d_x, *d_y;
+    int d_x_byte_count = sizeof(real) * len;
+    CHECK(cudaMalloc(&d_x, d_x_byte_count));
+    CHECK(cudaMalloc(&d_y, sizeof(real)));
+
+    CHECK(cudaMemcpy(d_x, x, d_x_byte_count, cudaMemcpyHostToDevice));
+ 
+    const int block_size = 128;
+    const int grid_size = (len+ block_size - 1) / block_size;
+    {
+        EventTimer event_timer;
+        reduce_in_shared_memory_with_atomic<<<grid_size, block_size, block_size * sizeof(real)>>>(d_x, d_y, len);
+        CHECK(cudaDeviceSynchronize());
+    }
+
+    real result = 0.0f;
+    CHECK(cudaMemcpy(&result, d_y, sizeof(real), cudaMemcpyDeviceToHost));
+    CHECK(cudaFree(d_x));
+    CHECK(cudaFree(d_y));
+
+    return result;
+}
+
 } // namespace test

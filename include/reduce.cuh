@@ -10,6 +10,7 @@ class Reduce {
   real ReduceInCPU(const real *x, const int len);
   real ReduceInGlobalMemory(real *x, const int len);
   real ReduceInSharedMemory(const real *x, const int len);
+  real ReduceInSharedMemoryWithAtomic(const real *x, const int len);
   
 
 }; // class Reduce
