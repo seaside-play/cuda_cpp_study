@@ -53,14 +53,21 @@ void TestMatrixOperate(int argc, char* argv[]) {
 
 void TestArrayReduce() {
     test::Reduce reduce;
-    constexpr size_t kCount = 1e8;
+    constexpr size_t kCount = 1e7;
     std::cout << "kCount " << kCount << std::endl;
     real *data = new real[kCount];
     for (int i = 0; i < kCount; ++i) {
         data[i] = 1.23;
     }
+
     auto ret = reduce.ReduceInCPU(data, kCount);
     std::cout << "Result is " << ret << " in cpu." << std::endl;
+
+    // 使用gpu共享内存进行reduce处理，不会改变数据内存
+    auto ret3 = reduce.ReduceInSharedMemory(data, kCount);
+    std::cout << "Result is " << ret3 << " in gpu shared memory." << std::endl;
+
+    // 使用gpu全局内存进行reduce处理，会改变数据内存
     auto ret2 = reduce.ReduceInGlobalMemory(data, kCount);
     std::cout << "Result is " << ret2 << " in gpu global memory." << std::endl;
 

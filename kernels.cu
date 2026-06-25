@@ -51,13 +51,30 @@ __global__ void reduce_in_global_memory(real *d_x, const int len) {
     for (int offset = blockDim.x >> 1; offset > 0; offset >>= 1) {
         if (tid < offset) {
             x[tid] += x[tid + offset];
-            __syncthreads();
         }
+        __syncthreads();
     }
 }
 
-__global__ void reduce_in_shared_memory(real *x, real *y, const int len) {
+__global__ void reduce_in_shared_memory(real *d_x, real *y, int len) {
+    int tid = threadIdx.x;
+    int bid = blockIdx.x;
+    int i = blockDim.x * blockIdx.x + tid;
+    //__shared__ real s_data[blockDim.x]; // 这样就可以完全和线程块的长度一致,但是数组需要常量数定义啊，所以不能使用
+    __shared__ real s_data[128];
+    s_data[tid] = (i < len) ? d_x[i] : 0.0f;
+    __syncthreads(); // 全部线程块中的所有线程，都实现了数据的赋值工作。
 
+    for (int offset = blockDim.x >> 1; offset > 0; offset >>= 1) {
+        if (tid < offset) {
+            s_data[tid] += s_data[tid + offset];
+        }
+        __syncthreads();
+    }
+
+    if (0 == tid) {
+        y[bid] = s_data[0]; // 将共享内存中的结果赋值到全局内存中，gpu内存之间的赋值，可以直接操作。
+    }
 
 }
 
