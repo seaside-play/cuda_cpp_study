@@ -57,7 +57,9 @@ real Reduce::ReduceInSharedMemory(const real *x, const int len) {
  
     {
         EventTimer event_timer;
-        reduce_in_shared_memory<<<grid_size, block_size>>>(d_x, d_y, len);
+        // reduce_in_shared_memory<<<grid_size, block_size>>>(d_x, d_y, len);
+        // 使用动态共享内存
+        reduce_in_shared_memory<<<grid_size, block_size, block_size * sizeof(real)>>>(d_x, d_y, len);
         CHECK(cudaDeviceSynchronize());
     }
 

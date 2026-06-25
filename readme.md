@@ -41,3 +41,10 @@ No error
 2. ncu --kernel-regex "add_kernel" -set full ./main
 分析占用率，访存，阻塞原因，修改代码（调Block尺寸，合并内存，优化共享内容）
 3. 修改代码后，重复1，2步，对比优化收益
+
+按行显示年月日时分秒
+git log --pretty=format:"%h %ad %s" --date=format:'%Y-%m-%d %H:%M:%S'
+
+%h	7 位短哈希（等同于 --oneline）
+%ad	作者提交日期 这个必须要有  之后的--data仅仅作者提交的日期进行格式化
+%s	提交标题

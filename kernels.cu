@@ -61,7 +61,9 @@ __global__ void reduce_in_shared_memory(real *d_x, real *y, int len) {
     int bid = blockIdx.x;
     int i = blockDim.x * blockIdx.x + tid;
     //__shared__ real s_data[blockDim.x]; // 这样就可以完全和线程块的长度一致,但是数组需要常量数定义啊，所以不能使用
-    __shared__ real s_data[128];
+    // __shared__ real s_data[128]; // 此处为静态共享内存，也可以使用动态共享内存，这样通用性就更强大
+    extern __shared__ real s_data[]; // 我的理解是，编译器会根据执行配置的参数来判断共享内存，并且进行底层参数的指定，
+                                     // 使用extern标识说明使用动态共享内存
     s_data[tid] = (i < len) ? d_x[i] : 0.0f;
     __syncthreads(); // 全部线程块中的所有线程，都实现了数据的赋值工作。
 
