@@ -33,6 +33,7 @@ set(SRC_CU
     utils.cu
     kernels.cu
     matrix_copy.cu
+    reduce.cu
  
     # test_cublas.cu
 )
@@ -50,6 +51,7 @@ target_link_libraries(query PRIVATE
 function(set_cuda_debug_options target)
     target_compile_options(${target} PRIVATE
         $<$<COMPILE_LANGUAGE:CUDA>:-g>
+        $<$<COMPILE_LANGUAGE:CUDA>:-O3>
         $<$<COMPILE_LANGUAGE:CUDA>:--ptxas-options=-v>
     )
 endfunction()
@@ -60,7 +62,7 @@ add_executable(main ${SRC_CU})
 target_include_directories(main PRIVATE ${CMAKE_SOURCE_DIR}/include)
 
 # 3. 调用函数，传入目标名 add1
-# set_cuda_debug_options(main)
+set_cuda_debug_options(main)
 
 # 去掉 CUDAToolkit::cublas
 target_link_libraries(main PRIVATE

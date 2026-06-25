@@ -45,4 +45,21 @@ __global__ void matrix_transpose3(real *B, const real *A, const MatDim2D mat_dim
     }
 }
 
+__global__ void reduce_in_global_memory(real *d_x, const int len) {
+    int tid = threadIdx.x;
+    real *x = d_x + blockDim.x * blockIdx.x;
+    for (int offset = blockDim.x >> 1; offset > 0; offset >>= 1) {
+        if (tid < offset) {
+            x[tid] += x[tid + offset];
+            __syncthreads();
+        }
+    }
+}
+
+__global__ void reduce_in_shared_memory(real *x, real *y, const int len) {
+
+
+}
+
+
 } // namespace test
