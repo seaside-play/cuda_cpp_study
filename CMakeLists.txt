@@ -16,6 +16,9 @@ if(USE_DP)
     add_compile_definitions(USE_DP)
 endif()
 
+
+option(USE_DEBUG "Enable debug" OFF)
+
 # find_package(CUDAToolkit REQUIRED)
 # 不用find_package(CUDAToolkit)
 find_package(CUDA REQUIRED)
@@ -62,7 +65,10 @@ add_executable(main ${SRC_CU})
 target_include_directories(main PRIVATE ${CMAKE_SOURCE_DIR}/include)
 
 # 3. 调用函数，传入目标名 add1
-set_cuda_debug_options(main)
+# 根据开关，向编译器传递宏定义
+if(USE_DEBUG)
+    set_cuda_debug_options(main)
+endif()
 
 # 去掉 CUDAToolkit::cublas
 target_link_libraries(main PRIVATE
