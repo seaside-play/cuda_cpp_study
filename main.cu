@@ -33,9 +33,9 @@ void TestMatrixOperate(int argc, char* argv[]) {
 
     test::Matrix matrix(rows, cols);
     std::vector<test::TranslateType> translate_types {//test::TranslateType::COPY, 
-                                                      test::TranslateType::TRANSPOSE1, 
-                                                      test::TranslateType::TRASNSPOSE1_SHARED, 
-                                                    //   test::TranslateType::TRANSPOSE2, 
+                                                    //   test::TranslateType::TRANSPOSE1, 
+                                                    //   test::TranslateType::TRASNSPOSE1_SHARED, 
+                                                      test::TranslateType::TRANSPOSE2, 
                                                     //   test::TranslateType::TRANSPOSE3
                                                     };
     // std::for_each(translate_types.cbegin(), translate_types.cend(), [&matrix, &B, &A](test::TranslateType item) {

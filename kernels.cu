@@ -66,9 +66,10 @@ __global__ void matrix_transpose1_by_shared_memory(real *B, const real *A, const
 __global__ void matrix_transpose2(real *B, const real *A, const MatDim2D mat_dim_2d) {
     const int x = blockDim.x * blockIdx.x + threadIdx.x;
     const int y = blockDim.y * blockIdx.y + threadIdx.y;
-    int index_src = x * mat_dim_2d.rows + y;
-    int index_des = y * mat_dim_2d.cols + x;
-    if (x < mat_dim_2d.cols && y < mat_dim_2d.rows) {
+    int index_src = x * mat_dim_2d.cols + y;
+    int index_des = y * mat_dim_2d.rows + x;
+    // 以下的xy是对原来的xy进行对调的形式，但是长度仍然保持不变，即y（x‘）仍然具有cols的长度
+    if (y < mat_dim_2d.cols && x < mat_dim_2d.rows) {
         B[index_des] = A[index_src];
     }
 }
